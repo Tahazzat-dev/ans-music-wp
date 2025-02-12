@@ -36,6 +36,7 @@ $ansmusic_office_contact_email = get_theme_mod( 'ansmusic_office_contact_email',
 $ansmusic_office_opening_time = get_theme_mod( 'ansmusic_office_opening_time', '');
 $ansmusic_phone_number = get_theme_mod( 'ansmusic_phone_number', '');
 $ansmusic_social_instagram = get_theme_mod( 'ansmusic_social_instagram', '');
+$ansmusic_social_facebook = get_theme_mod( 'ansmusic_social_facebook', '');
 $ansmusic_social_linkedin = get_theme_mod( 'ansmusic_social_linkedin', '');
 $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
 ?>
@@ -201,27 +202,25 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
               <div class="ANS_contact-info ANS_flex flex_column">
                 <h5 class="fs-md">OFFICES</h5>
                 <address>
-                  <span class="city">Sheridan, Wyoming</span>
                   <span class="city-address">
-                    30 N Gould St Ste R Sheridan WY 82801 USA
-                  </span>
-                  <span> +1(307)2042560 </span>
+                  <?php echo $ansmusic_office_address_1; ?>    
+                </span>
                 </address>
 
                 <address>
-                  <span class="city">Dhaka</span>
                   <span class="city-address">
-                    21/A New Eskaton Road, Dhaka – 1000, Bangladesh.
+                  <?php echo $ansmusic_office_address_2; ?>    
                   </span>
                 </address>
 
                 <address>
                   <!-- <span class="city"></span> -->
                   <span class="city-address">
-                    info@ansmusiclimited.com
+                    <?php echo $ansmusic_office_info_email; ?>
                     <br />
-                    +88 09611444739 <br />
-                    Mon-Fri 11am-5pm
+                    <?php echo $ansmusic_phone_number; ?>
+                    <br /> 
+                    <?php echo $ansmusic_office_opening_time; ?>
                   </span>
                 </address>
               </div>
@@ -256,13 +255,13 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
 
                 <div class="phone-wrap ANS_flex flex_align_center">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.webp" alt="phone icon" />
-                  <p class="nowrap fs-md">+88 09611444739</p>
+                  <p class="nowrap fs-md"> <?php echo $ansmusic_phone_number; ?></p>
                 </div>
 
                 <!-- socical links -->
                 <div class="social-links ANS_flex flex_align_center">
                   <a
-                    href="https://www.facebook.com/ansmusicdigital"
+                    href="<?php echo $ansmusic_social_facebook; ?>"
                     target="_blank"
                   >
                     <img
@@ -271,16 +270,16 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
                     />
                   </a>
                   <a
-                    href="https://www.youtube.com/@ANSMusicLimited"
+                    href="<?php echo $ansmusic_social_youtube; ?>"
                     target="_blank"
                   >
                     <img
-                      src="assets/icons/youtube-icon.png"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/icons/youtube-icon.png"
                       alt="Twitter icon"
                     />
                   </a>
                   <a
-                    href="https://www.linkedin.com/company/ansmusic"
+                    href="<?php echo $ansmusic_social_linkedin; ?>"
                     target="_blank"
                   >
                     <img
@@ -289,7 +288,7 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
                     />
                   </a>
                   <a
-                    href="https://www.instagram.com/ansmusic.digital/"
+                    href="<?php echo $ansmusic_social_instagram; ?>"
                     target="_blank"
                   >
                     <img

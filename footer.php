@@ -11,26 +11,48 @@
 
 ?>
 
+
+
+<?php
+$ansmusic_footer_logo = get_theme_mod( 'ansmusic_footer_logo', '');
+$ansmusic_footer_description = get_theme_mod( 'ansmusic_footer_description', '');
+$group_logo_first = get_theme_mod( 'group_logo_first', '');
+$group_logo_second = get_theme_mod( 'group_logo_second', '');
+$ansmusic_footer_copyright_text = get_theme_mod( 'ansmusic_footer_copyright_text', '');
+
+$ansmusic_office_address_1 = get_theme_mod( 'ansmusic_office_address_1', '');
+$ansmusic_office_address_2 = get_theme_mod( 'ansmusic_office_address_2', '');
+$ansmusic_office_info_email = get_theme_mod( 'ansmusic_office_info_email', '');
+$ansmusic_office_support_email = get_theme_mod( 'ansmusic_office_support_email', '');
+$ansmusic_office_contact_email = get_theme_mod( 'ansmusic_office_contact_email', '');
+$ansmusic_office_opening_time = get_theme_mod( 'ansmusic_office_opening_time', '');
+$ansmusic_footer_copyright_text = get_theme_mod( 'ansmusic_footer_copyright_text', '');
+// echo '<pre>';
+// print_r();
+// echo '</pre>';
+
+$ansmusic_phone_number = get_theme_mod( 'ansmusic_phone_number', '');
+$ansmusic_social_instagram = get_theme_mod( 'ansmusic_social_instagram', '');
+$ansmusic_social_facebook = get_theme_mod( 'ansmusic_social_facebook', '');
+$ansmusic_social_linkedin = get_theme_mod( 'ansmusic_social_linkedin', '');
+$ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
+?>
    <!-- footer starts -->
    <footer class="ANS_footer">
       <div class="footer-top ANS_container ANS_flex">
         <!-- site logo and description -->
         <div class="footer-des footer-col">
           <div class="footer-logo-wrap">
-            <a href="#" class="site-footer-logo">
+            <a href="<?php echo home_url(); ?>" class="site-footer-logo">
               <img
                 data-aos="zoom-in"
-                src="<?php echo get_template_directory_uri(); ?>/assets/img/ans-footer-logo.jpg"
+                src="<?php echo $ansmusic_footer_logo; ?>"
                 alt="Site logo"
               />
             </a>
           </div>
           <p data-aos="fade-up" class="">
-            ANS Music is a global digital music distributor and aggregator
-            dedicated to empowering artists, labels, and rights holders. Founded
-            in 2022, we provide comprehensive services, including digital music
-            and video distribution, royalty collection, licensing, and
-            marketing, ensuring creators receive maximum value and transparency.
+            <?php echo $ansmusic_footer_description; ?>
           </p>
         </div>
 
@@ -40,23 +62,23 @@
           <address data-aos="fade-up">
             <!-- <span class="city">Sheridan, Wyoming</span> -->
             <span class="city-address">
-              30 N Gould St Ste R Sheridan WY 82801 USA +1(307)2042560
+            <?php echo $ansmusic_office_address_1; ?> 
             </span>
           </address>
 
           <address data-aos="fade-up">
             <!-- <span class="city">Melbourne</span> -->
             <span class="city-address">
-              21/A New Eskaton Road, Dhaka – 1000, Bangladesh.
+            <?php echo $ansmusic_office_address_2; ?>    
             </span>
           </address>
 
           <address data-aos="fade-up">
             <!-- <span class="city">Sydney</span> -->
             <span class="city-address">
-              info@ansmusiclimited.com <br />
-              +88 09611444739 <br />
-              Mon-Fri 11am-5pm <br />
+            <?php echo $ansmusic_office_info_email; ?> <br />
+            <?php echo $ansmusic_phone_number; ?> <br />
+            <?php echo $ansmusic_office_opening_time; ?><br />
             </span>
           </address>
         </div>
@@ -115,7 +137,7 @@
             <img
               data-aos="zoom-in"
               class="a2im"
-              src="<?php echo get_template_directory_uri(); ?>/assets/img/a2im-logo.png"
+              src="<?php echo $group_logo_first ?>"
               alt="A2IM logo"
             />
           </a>
@@ -127,14 +149,14 @@
             <img
               data-aos="zoom-in"
               class="basis"
-              src="<?php echo get_template_directory_uri(); ?>/assets/img/basis-logo-bd.png"
+             src="<?php echo $group_logo_second ?>"
               alt="basis logo"
             />
           </a>
 
           <div data-aos="zoom-in" class="phone-wrap ANS_flex flex_align_center">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.webp" alt="phone icon" />
-            <span class="nowrap fs-md">+88 09611444739</span>
+            <span class="nowrap fs-md"><?php echo $ansmusic_phone_number; ?></span>
           </div>
         </div>
       </div>
@@ -145,28 +167,28 @@
       >
         <div class="footer-social-links ANS_flex flex_align_center">
           <!-- socical links -->
-          <a href="https://www.facebook.com/ansmusicdigital" target="_blank">
+          <a href="<?php echo  $ansmusic_social_facebook; ?>" target="_blank">
             <img
               data-aos="zoom-in"
               src="<?php echo get_template_directory_uri(); ?>/assets/img/facebook-icon.webp"
               alt="Facebook icon"
             />
           </a>
-          <a href="https://www.youtube.com/@ANSMusicLimited" target="_blank">
+          <a href="<?php echo  $ansmusic_social_youtube; ?>" target="_blank">
             <img
               data-aos="zoom-in"
               src="<?php echo get_template_directory_uri(); ?>/assets/icons/youtube-icon.png"
               alt="Twitter icon"
             />
           </a>
-          <a href="https://www.linkedin.com/company/ansmusic" target="_blank">
+          <a href="<?php echo  $ansmusic_social_linkedin; ?>" target="_blank">
             <img
               data-aos="zoom-in"
               src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
               alt="Linkedin icon"
             />
           </a>
-          <a href="https://www.instagram.com/ansmusic.digital/" target="_blank">
+          <a href="<?php echo  $ansmusic_social_instagram; ?>" target="_blank">
             <img
               data-aos="zoom-in"
               src="<?php echo get_template_directory_uri(); ?>/assets/img/instragram-icon.webp"
@@ -176,8 +198,7 @@
         </div>
 
         <p data-aos="fade-up">
-          &copy; Copyright 2024 | <a href="#">ANS Digital</a> | All right
-          reserved | Powered by ANS Enterprise LLC
+          &copy; <?php echo  $ansmusic_footer_copyright_text; ?>
         </p>
       </div>
     </footer>
