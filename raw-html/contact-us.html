@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/aos.css" />
+
+    <!-- TODO: have to remove this befory delivery -->
+    <link rel="stylesheet" href="/assets/css/test.css" />
+  </head>
+  <body>
+    <header class="ANS_header">
+      <div class="ANS_header-inner ANS_flex flex_align_center justify_between">
+        <div class="nav-logo-wrap">
+          <a href="/" class="site-nav-logo">
+            <img src="assets/img/ANS-site-logo.png" alt="Site logo" />
+          </a>
+        </div>
+
+        <!-- desktop navbar -->
+        <nav class="ANS_nav">
+          <ul class="ANS_flex flex_align_center">
+            <li data-aos="zoom-in-down" class="home-link">
+              <a class="fs-base" href="/">HOME</a>
+            </li>
+            <li data-aos="zoom-in-down">
+              <a class="fs-base " href="/services.html">SERVICE</a>
+            </li>
+            <li data-aos="zoom-in-down">
+              <a class="fs-base" href="#">WHY ANS MUSIC</a>
+            </li>
+            <li data-aos="zoom-in-down">
+              <a
+                class="fs-base"
+                target="_blank"
+                href="https://ansbackstage.com/auth/register"
+                >DISTRIBUTION SIGNUP</a
+              >
+            </li>
+            <li data-aos="zoom-in-down" class="contact-link">
+              <a class="fs-base active" href="/contact-us.html">CONTACT</a>
+            </li>
+            <li data-aos="zoom-in-down" class="about-link">
+              <a class="fs-base" href="/about-us.html">ABOUT</a>
+            </li>
+            <li data-aos="fade-left">
+              <a
+                class="fs-base ANS_btn btn-b-yellow"
+                target="_blank"
+                href="https://auth.ansmusiclimited.com/oauth2/authorize?client_id=85a1ac4c-dce9-4f0c-9543-b99d375c707c&response_type=code&redirect_uri=https://backstage.ansmusiclimited.com/sign-in&env=prod&locale=en&from=https://backstage.ansmusiclimited.com"
+                >CLIENT LOGIN</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- mobile hamberger menu -->
+        <button class="ANS_hamburger-menu mobi open">
+          <div class="bar-1"></div>
+          <div class="bar-2"></div>
+          <div class="bar-3"></div>
+        </button>
+      </div>
+    </header>
+
+    <!-- sidebar starts -->
+    <aside class="ANS_sidebar">
+      <div class="sidebar-toggle-container ANS_flex flex_column">
+        <div class="ANS_sidebar-logo-wrap small hide">
+          <a href="/" id="sidebar-small-logo" class="top-small-logo">
+            <img src="assets/img/site-updated-logo.png" alt="site logo" />
+          </a>
+        </div>
+        <button class="sidebar-toggler-btn">
+          <span></span> <span></span> <span></span> <span></span>
+        </button>
+
+        <div class="active-page-info">
+          <span class="info">INTRO</span>
+        </div>
+      </div>
+
+      <!-- sidbar drawer -->
+      <div class="sidebar-drawer-wrap">
+        <div class="sidebar-inner ANS_flex">
+          <!-- menu column -->
+          <div class="menu-col ANS_flex flex_column justify_center">
+            <div class="sidebar-nav-logo-wrap">
+              <a class="site-nav-logo">
+                <img src="assets/img/ANS-site-logo.png" alt="Site logo" />
+              </a>
+            </div>
+            <ul class="ANS_menu ANS_flex flex_column">
+              <li>
+                <a
+                  class="sidenav-link fill-fade-in fill-clr-white"
+                  data-text="HOME"
+                  href="/"
+                  >HOME</a
+                >
+              </li>
+              <li>
+                <a
+                  class="sidenav-link  fill-fade-in fill-clr-white"
+                  data-text="SERVICE"
+                  href="/services.html"
+                  >SERVICE</a
+                >
+              </li>
+              <li>
+                <a
+                  class="sidenav-link fill-fade-in fill-clr-white"
+                  data-text="WHY ANS MUSIC"
+                  href="#"
+                  >WHY ANS MUSIC</a
+                >
+              </li>
+              <li>
+                <a
+                  class="sidenav-link fill-fade-in fill-clr-white"
+                  data-text="DISTRIBUTION SIGNUP"
+                  href="https://ansbackstage.com/auth/register"
+                  >DISTRIBUTION SIGNUP</a
+                >
+              </li>
+              <li>
+                <a
+                  class="sidenav-link active fill-fade-in fill-clr-white"
+                  data-text="CONTACT"
+                  href="/contact-us.html"
+                  >CONTACT</a
+                >
+              </li>
+              <li>
+                <a
+                  class="sidenav-link fill-fade-in fill-clr-white"
+                  data-text="ABOUT"
+                  href="/about-us.html"
+                  >ABOUT</a
+                >
+              </li>
+              <li>
+                <a
+                  class="sidenav-link fill-fade-in fill-clr-white"
+                  data-text="CLIENT LOGIN"
+                  href="https://auth.ansmusiclimited.com/oauth2/authorize?client_id=85a1ac4c-dce9-4f0c-9543-b99d375c707c&response_type=code&redirect_uri=https://backstage.ansmusiclimited.com/sign-in&env=prod&locale=en&from=https://backstage.ansmusiclimited.com"
+                  >CLIENT LOGIN</a
+                >
+              </li>
+            </ul>
+            <!-- <div class="phone-info flex_grow">
+                <div>
+                  <img src="assets/img/phone.webp" alt="Phone icon" />
+                  <p>(08) 84701714</p>
+                </div>
+              </div> -->
+          </div>
+
+          <!-- contact column -->
+          <div class="contact-col ANS_flex flex_column">
+            <div class="ANS_flex contact-wrapper">
+              <div class="ANS_contact-info ANS_flex flex_column">
+                <h5 class="fs-md">OFFICES</h5>
+                <address>
+                  <span class="city">Sheridan, Wyoming</span>
+                  <span class="city-address">
+                    30 N Gould St Ste R Sheridan WY 82801 USA
+                  </span>
+                  <span> +1(307)2042560 </span>
+                </address>
+
+                <address>
+                  <span class="city">Dhaka</span>
+                  <span class="city-address">
+                    21/A New Eskaton Road, Dhaka – 1000, Bangladesh.
+                  </span>
+                </address>
+
+                <address>
+                  <!-- <span class="city"></span> -->
+                  <span class="city-address">
+                    info@ansmusiclimited.com
+                    <br />
+                    +88 09611444739 <br />
+                    Mon-Fri 11am-5pm
+                  </span>
+                </address>
+              </div>
+
+              <div class="ANS_contact-form-wrap">
+                <h5 class="fs-md">Start A Conversation</h5>
+                <form class="ANS_contact-form ANS_flex flex_column" action="">
+                  <input name="name" id="name" type="text" placeholder="Name" />
+                  <input
+                    name="email"
+                    id="email"
+                    type="email"
+                    placeholder="Email"
+                  />
+                  <textarea
+                    rows="1"
+                    name="message"
+                    id="message"
+                    type="text"
+                    placeholder="Message"
+                  ></textarea>
+                  <input
+                    name="verifyNnonce"
+                    id="verifyNnonce"
+                    placeholder="What is 1+2=?"
+                    type="text"
+                  />
+                  <button type="submit" class="fs-base ANS_btn btn-b-yellow">
+                    SEND
+                  </button>
+                </form>
+
+                <div class="phone-wrap ANS_flex flex_align_center">
+                  <img src="assets/img/phone.webp" alt="phone icon" />
+                  <p class="nowrap fs-md">+88 09611444739</p>
+                </div>
+
+                <!-- socical links -->
+                <div class="social-links ANS_flex flex_align_center">
+                  <a
+                    href="https://www.facebook.com/ansmusicdigital"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/img/facebook-icon.webp"
+                      alt="Facebook icon"
+                    />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@ANSMusicLimited"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/icons/youtube-icon.png"
+                      alt="Twitter icon"
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/ansmusic"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/img/linkedin-icon.webp"
+                      alt="Linkedin icon"
+                    />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/ansmusic.digital/"
+                    target="_blank"
+                  >
+                    <img
+                      src="assets/img/instragram-icon.webp"
+                      alt="Instragram icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- our partners -->
+            <div
+              class="our-partners-wrapper marquee-container ANS_flex flex_column"
+            >
+              <div
+                class="ANS_partners-inner ANS_container ANS_marquee-slider-wrapper"
+              >
+                <div class="ANS_flex flex_align_center ANS_marquee-slider">
+                  <img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/apple.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Spotify.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/amazon.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tidal-b.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Facebook.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tiktok.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/vevo.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/napster.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/YouTube01.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/resso.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Deezer_logo.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Pandora.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/instagram.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/apple.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Spotify.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/amazon.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tidal-b.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Facebook.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tiktok.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/vevo.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/napster.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/YouTube01.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/resso.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Deezer_logo.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Pandora.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/instagram.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/apple.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Spotify.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/amazon.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tidal-b.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Facebook.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tiktok.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/vevo.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/napster.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/YouTube01.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/resso.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Deezer_logo.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Pandora.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  /><img
+                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/instagram.webp"
+                    alt="icon"
+                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <!-- sidebar ends -->
+
+    <main class="ANS_main-wrapper">
+      <section class="ANS_contact-banner-wrapper">
+        <!-- banner content -->
+        <div
+          class="ANS_contact-banner-bg"
+        >
+        <picture>
+            <source media="(min-width: 768px)" srcset="assets/img/contact-us-banner-large.webp">
+            <source media="(max-width: 767px)" srcset="assets/img/contact-us-banner-small.webp">
+            <img src="assets/img/contact-us-banner-large.webp" alt="Banner image">
+        </picture>
+
+
+        <div class="banner-overlay"></div>
+        </div>
+
+        <!-- banner content -->
+          <div class="ANS_contact-banner-container ANS_flex flex_column">
+            <div class="ANS_contact-banner-content ANS_container ANS_flex">
+                <div class="ANS_office-address ANS_flex flex_column">
+                    <!-- contact info card -->
+                    <div class="contact-info-card">
+                        <h4 data-aos="fade-up"  class="fs-md icon-box location-mark">Office addresses</h4>
+                        <p data-aos="fade-up" class="icon-box arrow-location">30 N Gould St Ste R Sheridan WY 82801 USA</p>
+                        <p data-aos="fade-up" class="icon-box phone">+1(307)2042560</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <h4 data-aos="fade-up" class="fs-md icon-box location-mark">Office addresses</h4>
+                        <p data-aos="fade-up" class="icon-box arrow-location">21/A New Eskaton Road, Dhaka – 1000, Bangladesh.</p>
+                        <p data-aos="fade-up" class="icon-box phone">+88 09611444739</p>
+                        <p data-aos="fade-up" class="icon-box time-glass">Mon-Fri 11am-5pm</p>
+                    </div>
+                    <!-- contact info card -->
+                    <div class="contact-info-card">
+                      <h4 data-aos="fade-up" class="fs-md icon-box group-arrow">Our Emails</h4>
+                      <p data-aos="fade-up" class="icon-box email">info@ansmusiclimited.com</p>
+                      <p data-aos="fade-up" class="icon-box email">support@ansmusiclimited.com</p>
+                      <p data-aos="fade-up" class="icon-box email">contact@ansmusiclimited.com</p>
+                    </div>
+                    <!-- contact info card -->
+                </div>
+
+                <!-- contact form -->
+                <div class="form-container">
+                    <h2  data-aos="fade-up" class="fs-4xl">Contact Us</h2>
+                    <form class="ANS_contact-form ANS_flex flex_column" action="">
+                        <input data-aos="fade-up" name="name" id="name" type="text" placeholder="Name" />
+                        <input data-aos="fade-up" name="email" id="email" type="email" placeholder="Email" />
+                        <textarea
+                        data-aos="fade-up"
+                          rows="1"
+                          name="message"
+                          id="message"
+                          type="text"
+                          placeholder="Message"
+                        ></textarea>
+                        <input
+                        data-aos="fade-up"
+                          name="verifyNnonce"
+                          id="verifyNnonce"
+                          placeholder="What is 1+2=?"
+                          type="text"
+                        />
+                        <button data-aos="fade-up" type="submit" class="fs-base ANS_btn btn-b-yellow">
+                          SEND
+                        </button>
+                      </form>
+                </div>
+                <!-- contact form -->
+            </div>
+          </div>
+      </section>
+    </main>
+
+    <!-- footer starts -->
+    <footer class="ANS_footer">
+      <div class="footer-top ANS_container ANS_flex">
+        <!-- site logo and description -->
+        <div class="footer-des footer-col">
+          <div  class="footer-logo-wrap">
+            <a href="#" class="site-footer-logo">
+              <img data-aos="zoom-in" src="assets/img/ans-footer-logo.jpg" alt="Site logo" />
+            </a>
+          </div>
+          <p data-aos="fade-up" class="">
+            ANS Music is a global digital music distributor and aggregator
+            dedicated to empowering artists, labels, and rights holders. Founded
+            in 2022, we provide comprehensive services, including digital music
+            and video distribution, royalty collection, licensing, and
+            marketing, ensuring creators receive maximum value and transparency.
+          </p>
+        </div>
+
+        <!-- contact info -->
+        <div class="footer-col footer-contact-info ANS_flex flex_column">
+          <h5 data-aos="zoom-in" class="fs-md">OFFICES</h5>
+          <address data-aos="fade-up">
+            <!-- <span class="city">Sheridan, Wyoming</span> -->
+            <span class="city-address">
+              30 N Gould St Ste R Sheridan WY 82801 USA +1(307)2042560
+            </span>
+          </address>
+
+          <address data-aos="fade-up">
+            <!-- <span class="city">Melbourne</span> -->
+            <span class="city-address">
+              21/A New Eskaton Road, Dhaka – 1000, Bangladesh.
+            </span>
+          </address>
+
+          <address data-aos="fade-up">
+            <!-- <span class="city">Sydney</span> -->
+            <span class="city-address">
+              info@ansmusiclimited.com <br />
+              +88 09611444739 <br />
+              Mon-Fri 11am-5pm <br />
+            </span>
+          </address>
+        </div>
+
+        <!-- quick links -->
+        <!-- <div class="footer-col ANS_contact-form-wrap">
+          <h5 data-aos="zoom-in" class="fs-md">Start A Conversation</h5>
+          <form class="ANS_contact-form ANS_flex flex_column" action="">
+            <input data-aos="fade-up" name="name" id="name" type="text" placeholder="Name" />
+            <input data-aos="fade-up" name="email" id="email" type="email" placeholder="Email" />
+            <textarea
+            data-aos="fade-up"
+              rows="1"
+              name="message"
+              id="message"
+              type="text"
+              placeholder="Message"
+            ></textarea>
+            <input
+            data-aos="fade-up"
+              name="verifyNnonce"
+              id="verifyNnonce"
+              placeholder="What is 1+2=?"
+              type="text"
+            />
+            <button data-aos="fade-up" type="submit" class="fs-base ANS_btn btn-b-yellow">
+              SEND
+            </button>
+          </form>
+        </div> -->
+
+        <!-- basis membership logo -->
+        <div class="footer-col membership-info">
+          <h5 data-aos="zoom-in">PROUD MEMBERS OF</h5>
+
+          <a target="_blank" href="https://membership.a2im.org/memberdirectory/Details/ans-music-distribution-3522680">
+            <img data-aos="zoom-in" class="a2im" src="assets/img/a2im-logo.png" alt="A2IM logo" />
+          </a>
+
+          <a target="_blank" href="https://basis.org.bd/company-profile/23-12-057">
+            <img
+            data-aos="zoom-in"
+              class="basis"
+              src="assets/img/basis-logo-bd.png"
+              alt="basis logo"
+            />
+          </a>
+         
+
+          <div data-aos="zoom-in" class="phone-wrap ANS_flex flex_align_center">
+            <img src="assets/img/phone.webp" alt="phone icon" />
+            <span class="nowrap fs-md">+88 09611444739</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- bottom footer -->
+      <div
+        class="footer-bottom ANS_container ANS_flex flex_align_center justify_center"
+      >
+        <div  class="footer-social-links ANS_flex flex_align_center">
+          <!-- socical links -->
+          <a href="https://www.facebook.com/ansmusicdigital" target="_blank">
+            <img data-aos="zoom-in" src="assets/img/facebook-icon.webp" alt="Facebook icon" />
+          </a>
+          <a href="https://www.youtube.com/@ANSMusicLimited" target="_blank">
+            <img data-aos="zoom-in"  src="assets/icons/youtube-icon.png" alt="Twitter icon" />
+          </a>
+          <a href="https://www.linkedin.com/company/ansmusic" target="_blank">
+            <img data-aos="zoom-in" src="assets/img/linkedin-icon.webp" alt="Linkedin icon" />
+          </a>
+          <a href="https://www.instagram.com/ansmusic.digital/" target="_blank">
+            <img data-aos="zoom-in" src="assets/img/instragram-icon.webp" alt="Instragram icon" />
+          </a>
+        </div>
+
+        <p data-aos="fade-up">
+          &copy; Copyright 2024 | <a href="#">ANS Digital</a> | All right
+          reserved | Powered by ANS Enterprise LLC
+        </p>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
