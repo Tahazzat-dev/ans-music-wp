@@ -21,14 +21,22 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+
+
+
+<?php
+/*theme mode variables for dynamic elements*/
+$ansmusic_header_logo = get_theme_mod( 'ansmusic_header_logo', '');
+$ansmusic_sidebar_logo = get_theme_mod( 'ansmusic_sidebar_logo', '');
+?>
 <header class="ANS_header">
       <div class="ANS_header-inner ANS_flex flex_align_center justify_between">
         <div class="nav-logo-wrap">
           <a href="<?php echo home_url(); ?>" class="site-nav-logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ANS-site-logo.png" alt="Site logo" />
+            <img src="<?php echo $ansmusic_header_logo; ?>" alt="Site logo" />
           </a>
         </div>
-        
+
 
         <!-- desktop navbar -->
         <nav class="ANS_nav">
@@ -81,7 +89,7 @@
       <div class="sidebar-toggle-container ANS_flex flex_column">
         <div class="ANS_sidebar-logo-wrap small hide">
           <a href="<?php echo home_url(); ?>/" id="sidebar-small-logo" class="top-small-logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-updated-logo.png" alt="site logo" />
+            <img src="<?php echo $ansmusic_sidebar_logo; ?>" alt="site logo" />
           </a>
         </div>
         <button class="sidebar-toggler-btn">
@@ -89,7 +97,19 @@
         </button>
 
         <div class="active-page-info">
-          <span class="info">INTRO</span>
+          <span class="info">
+          <?php
+            if (is_front_page()) {
+                echo 'Home'; 
+            } elseif (is_page()) {
+                echo get_the_title();
+            } elseif (is_single()) {
+                echo get_the_title();
+            } else {
+                echo 'INTRO'; 
+            }
+        ?>
+          </span>
         </div>
       </div>
 
