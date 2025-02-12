@@ -188,6 +188,8 @@ function ans_customize_necessary_info($wp_customize){
         'office_address_1' => ['Office Address 1', '30 N Gould St Ste R Sheridan WY 82801 USA +1(307)2042560', 'This address will appear in office address', 'textarea'],
         'office_address_2' => ['Office Address 2', '21/A New Eskaton Road, Dhaka – 1000, Bangladesh.', 'This address will appear in office address', 'textarea'],
         'office_info_email' => ['Info Email', 'info@ansmusiclimited.com', 'This email will show in info email section', 'email'],
+        'office_support_email' => ['Support Email', 'support@ansmusiclimited.com', 'This email will show in support email section', 'email'],
+        'office_contact_email' => ['Contact Email', 'contact@ansmusiclimited.com', 'This email will show in contact email section', 'email'],
         'office_opening_time' => ['Office Opening Time', 'Mon-Fri 11am-5pm', 'Office opening and closing time', 'text'],
         'phone_number' => ['Phone Number', '+88 09611444739', 'Phone number for sidepanel, footer contact sections', 'text'],
 		'social_facebook' => ['Facebook profile URL', 'https://www.facebook.com/ansmusicdigital','','url'],

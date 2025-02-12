@@ -28,6 +28,16 @@
 /*theme mode variables for dynamic elements*/
 $ansmusic_header_logo = get_theme_mod( 'ansmusic_header_logo', '');
 $ansmusic_sidebar_logo = get_theme_mod( 'ansmusic_sidebar_logo', '');
+$ansmusic_office_address_1 = get_theme_mod( 'ansmusic_office_address_1', '');
+$ansmusic_office_address_2 = get_theme_mod( 'ansmusic_office_address_2', '');
+$ansmusic_office_info_email = get_theme_mod( 'ansmusic_office_info_email', '');
+$ansmusic_office_support_email = get_theme_mod( 'ansmusic_office_support_email', '');
+$ansmusic_office_contact_email = get_theme_mod( 'ansmusic_office_contact_email', '');
+$ansmusic_office_opening_time = get_theme_mod( 'ansmusic_office_opening_time', '');
+$ansmusic_phone_number = get_theme_mod( 'ansmusic_phone_number', '');
+$ansmusic_social_instagram = get_theme_mod( 'ansmusic_social_instagram', '');
+$ansmusic_social_linkedin = get_theme_mod( 'ansmusic_social_linkedin', '');
+$ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
 ?>
 <header class="ANS_header">
       <div class="ANS_header-inner ANS_flex flex_align_center justify_between">
@@ -113,6 +123,8 @@ $ansmusic_sidebar_logo = get_theme_mod( 'ansmusic_sidebar_logo', '');
         </div>
       </div>
 
+
+
       <!-- sidbar drawer -->
       <div class="sidebar-drawer-wrap">
         <div class="sidebar-inner ANS_flex">
@@ -120,7 +132,7 @@ $ansmusic_sidebar_logo = get_theme_mod( 'ansmusic_sidebar_logo', '');
           <div class="menu-col ANS_flex flex_column justify_center">
             <div class="sidebar-nav-logo-wrap">
               <a class="site-nav-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ANS-site-logo.png" alt="Site logo" />
+                <img src="<?php echo $ansmusic_header_logo; ?>" alt="Site logo" />
               </a>
             </div>
             <ul class="ANS_menu ANS_flex flex_column">
@@ -459,6 +471,6 @@ $ansmusic_sidebar_logo = get_theme_mod( 'ansmusic_sidebar_logo', '');
             </div>
           </div>
         </div>
-      </div>
+      >
     </aside>
     <!-- sidebar ends -->
