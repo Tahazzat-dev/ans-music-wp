@@ -119,7 +119,7 @@ ol {
   --navy-blue:#08152b;
   --dark-blue:#03091B;
   --deep-navy-blue:#081239;
-  --deep-shade-blue:#8182a4;
+  /* --deep-shade-blue:#8182a4; */
   --bg-overlay-transparent: rgba(0, 0, 0, 0.72);
 
   --ff-road-rage: 'Road Rage', sans-serif;

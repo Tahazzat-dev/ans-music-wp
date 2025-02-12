@@ -28,6 +28,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ANS-site-logo.png" alt="Site logo" />
           </a>
         </div>
+        
 
         <!-- desktop navbar -->
         <nav class="ANS_nav">

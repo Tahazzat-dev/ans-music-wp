@@ -345,7 +345,6 @@ body {
 
 .ANS_sidebar .ANS_contact-info h5 {
   font-weight: 400;
-  /* color: var(--deep-shade-blue); */
   color: var(--white);
 }
 
@@ -382,7 +381,6 @@ body {
 
 .ANS_contact-form-wrap h5 {
   font-weight: 400;
-  /* color: var(--deep-shade-blue); */
   color: var(--white);
   margin-bottom: 20px;
 }
