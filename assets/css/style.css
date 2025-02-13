@@ -912,13 +912,15 @@ width: 30px;
   top: 0;
   left: 0;
   z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 
 .ANS_contact-banner-bg picture,
 .ANS_contact-banner-bg img{
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   z-index: -1;
 }
 
@@ -1106,6 +1108,7 @@ width: 30px;
   color: var(--light-green);
   text-align: center;
   margin-top: 10px;
+  max-width: 550px;
 }
 
 
@@ -1392,7 +1395,10 @@ object-fit: cover;
   margin-bottom: 40px;
 }
 .ANS_distribution-plartform-inner .top-text h2{
+  margin:0 auto;
   margin-bottom: 10px;
+  max-width:650px;
+  text-align:center;
 }
 .ANS_distribution-plartform-inner .top-text h3{
   font-weight: 400;
@@ -1448,10 +1454,17 @@ object-fit: cover;
   gap: 120px;
 }
 
+
 .ANS_service-container{
   gap: 50px;
   max-width: 1200px;
 }
+
+
+.ANS_service-wrapper .ANS_service-container:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
 
 .ANS_service-container .section-thum{
   width: 50%;
@@ -1465,7 +1478,7 @@ object-fit: cover;
 .ANS_service-container .section-thum img{
   width: 100%;
   height: 100%;
-  transition: var(--transition-normal);
+  transition: var(--transition-normal) !important;
   object-fit:cover;
 }
 
@@ -1577,7 +1590,24 @@ gap: 35px;
 
 
 
+/* ======= not found page ======== */
+.ANS_main-wrapper.not_found_page{
+  height: 600px;
+  width: 100%;
+}
 
+.ANS_main-wrapper.not_found_page .ANS_container{
+  height: 100%;
+  width: 100%;
+}
+
+.ANS_main-wrapper.not_found_page h3{
+  margin-bottom: 30px;
+}
+.ANS_main-wrapper.not_found_page p{
+  margin-bottom: 25px;
+  max-width: 500px;
+}
 /* ================= 
       Device responsiveness
              ================== */
@@ -2184,7 +2214,7 @@ gap: 35px;
 }
 
 .ANS_service-wrapper .ANS_service-container:nth-child(odd) {
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .ANS_service-container .section-thum {

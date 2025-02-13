@@ -152,7 +152,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
             <!-- team details box -->
             <div class="ANS_team-details ANS_flex flex_align_center">
               <div class="team-profile">
-                <img  data-aos="fade-down" src="assets/img/ceo-and-founder.jpg" alt="Team member" />
+                <img  data-aos="fade-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/ceo-and-founder.jpg" alt="Team member" />
               </div>
               <div class="role">
                 <h5  data-aos="zoom-in-up" class="fs-2xl">CEO & Founder</h5>
@@ -174,7 +174,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
                   <a  data-aos="zoom-in-up" href="#" target="_blank"
                     ><img
                       data-aos="zoom-in"
-                      src="assets/img/linkedin-icon.webp"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
                       alt="Linkedin icon"
                       class="aos-init aos-animate"
                   /></a>
@@ -200,7 +200,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
                   <a  data-aos="zoom-in-up" href="#" target="_blank"
                     ><img
                       data-aos="zoom-in"
-                      src="assets/img/linkedin-icon.webp"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
                       alt="Linkedin icon"
                       class="aos-init aos-animate"
                   /></a>
@@ -210,7 +210,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
                 <h5  data-aos="zoom-in-up" class="fs-2xl">OPERATIONS MANAGER</h5>
               </div>
               <div class="team-profile">
-                <img data-aos="fade-down" src="assets/img/other-team-member.png" alt="Team member" />
+                <img data-aos="fade-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/other-team-member.png" alt="Team member" />
               </div>
             </div>
             <!-- team details box -->
@@ -218,7 +218,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
               <div class="team-profile">
                 <img
                 data-aos="fade-down"
-                  src="assets/img/other-team-member-5.png"
+                  src="<?php echo get_template_directory_uri(); ?>/assets/img/other-team-member-5.png"
                   alt="Team member"
                 />
               </div>
@@ -242,7 +242,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
                   <a  data-aos="zoom-in-up" href="#" target="_blank"
                     ><img
                       data-aos="zoom-in"
-                      src="assets/img/linkedin-icon.webp"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
                       alt="Linkedin icon"
                       class="aos-init aos-animate"
                   /></a>
@@ -268,7 +268,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
                   <a  data-aos="zoom-in-up" href="#" target="_blank"
                     ><img
                       data-aos="zoom-in"
-                      src="assets/img/linkedin-icon.webp"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
                       alt="Linkedin icon"
                       class="aos-init aos-animate"
                   /></a>
@@ -280,7 +280,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
               <div class="team-profile">
                 <img
                 data-aos="fade-down"
-                  src="assets/img/other-team-member-2.png"
+                  src="<?php echo get_template_directory_uri(); ?>/assets/img/other-team-member-2.png"
                   alt="Team member"
                 />
               </div>
@@ -290,7 +290,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
               <div class="team-profile">
                 <img
                 data-aos="fade-down"
-                  src="assets/img/other-team-member-4.png"
+                  src="<?php echo get_template_directory_uri(); ?>/assets/img/other-team-member-4.png"
                   alt="Team member"
                 />
               </div>
@@ -311,7 +311,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
                   <a  data-aos="zoom-in-up" href="#" target="_blank"
                     ><img
                       data-aos="zoom-in"
-                      src="assets/img/linkedin-icon.webp"
+                      src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
                       alt="Linkedin icon"
                       class="aos-init aos-animate"
                   /></a>
@@ -324,15 +324,27 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
       </section>
 
         <!-- our expertise -->
+        <?php
+   $our_expertise_section_title = get_field('about_us_our_experitse_section_title');
+ ?>
   <section class="ANS_expertise-wrap">
     <div class="ANS_expertise-inner ANS_container">
         <div class="top-text">
             <h2 class="section-title text-fill neon-stroke fs-6xl">
-              <span data-text="OUR">OUR</span> <br />
-              <span data-text="EXPERTISE">EXPERTISE</span>
+            <?php 
+                if (!empty($our_expertise_section_title)) {
+                    $words = explode(' ', strtoupper($our_expertise_section_title));
+                    foreach ($words as $index => $word) {
+                        echo '<span data-aos="zoom-in-up" data-text="' . esc_attr($word) . '">' . esc_html($word) . '</span>';
+                        if ($index < count($words) - 1) {
+                            echo '<br />';
+                        }
+                    }
+                }
+            ?>
             </h2>
             <h4 class="fs-2xl section-subtitle">
-                Powering Artists with Innovation & Expertise
+              <?php echo get_field('about_us_our_experitse_section_subtitle');?>
             </h4>
           </div>
 
@@ -340,32 +352,32 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
 
             <!-- expertise cards -->
             <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="assets/icons/knowledge-icon.svg" alt="Expertise image">
+                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/knowledge-icon.svg" alt="Expertise image">
                     <h5  data-aos="zoom-in-up" class="name">Music Industry Knowledge</h5>
             </a>
             <!-- expertise cards -->
             <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="assets/icons/distribution-network.svg" alt="Expertise image">
+                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/distribution-network.svg" alt="Expertise image">
                     <h5  data-aos="zoom-in-up" class="name">Digital & Physical Distribution Networks</h5>
             </a>
             <!-- expertise cards -->
             <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="assets/icons/meta-data-management-and-right-administration.svg" alt="Expertise image">
+                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/meta-data-management-and-right-administration.svg" alt="Expertise image">
                     <h5  data-aos="zoom-in-up" class="name">Metadata Management & Rights Administration</h5>
             </a>
             <!-- expertise cards -->
             <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="assets/icons/marketing-and-distribution-icon.svg" alt="Expertise image">
+                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/marketing-and-distribution-icon.svg" alt="Expertise image">
                     <h5  data-aos="zoom-in-up" class="name">Marketing & Promotion Strategies</h5>
             </a>
             <!-- expertise cards -->
             <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="assets/icons/technology-and-software-development.svg" alt="Expertise image">
+                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/technology-and-software-development.svg" alt="Expertise image">
                     <h5  data-aos="zoom-in-up" class="name">Technology & Software Development</h5>
             </a>
             <!-- expertise cards -->
             <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="assets/icons/legal-and-licencing-icon.svg" alt="Expertise image">
+                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/legal-and-licencing-icon.svg" alt="Expertise image">
                     <h5  data-aos="zoom-in-up" class="name">Legal & Licensing Expertise</h5>
             </a>
             <!-- expertise cards -->
@@ -376,7 +388,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
   <!-- company location -->
   <div class="ANS_company-location-wrap">
     <div class="ANS_company-location-inner">
-        <img  data-aos="fade-down" src="assets/img/company-location.png" alt="Company location">
+        <img  data-aos="fade-down" src="<?php echo get_field('company_location_map_large_image'); ?>" alt="Company location">
     </div>
    </div>
      

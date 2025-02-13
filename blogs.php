@@ -9,19 +9,29 @@ get_header();
 ?>
 
 <main class="ANS_main-wrapper">
+
+
+<?php
+// Blogs page customization related ACF fields
+
+$banner_large_background = get_field('blogs_banner_large_background');
+$banner_small_background = get_field('blogs_banner_small_background');
+$banner_title = get_field('blogs_banner_title');
+$banner_subtitle = get_field('blogs_banner_subtitle');
+?>
       <section class="ANS_about-banner-wrapper">
         <!-- banner content -->
         <div class="ANS_about-banner-bg">
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="assets/img/about-us-banner-bg.jpg"
+              srcset="<?php echo $banner_large_background; ?>"
             />
             <source
               media="(max-width: 767px)"
-              srcset="assets/img/about-us-banner-bg.jpg"
+              srcset="<?php echo $banner_small_background; ?>"
             />
-            <img src="assets/img/about-us-banner-bg.jpg" alt="Banner image" />
+            <img  data-aos="fade-down" src="<?php echo $banner_large_background; ?>" alt="Banner image" />
           </picture>
 
           <div class="banner-overlay"></div>
@@ -33,15 +43,26 @@ get_header();
             class="ANS_about-banner-content ANS_container ANS_flex flex_column flex_align_center justify_center"
           >
             <h2 class="text-fill neon-stroke fs-6xl">
-              <span data-text="BLOG">BLOG</span>
+              <span data-aos="zoom-in" data-text="<?php echo strtoupper($banner_title); ?>"><?php echo strtoupper($banner_title); ?></span>
             </h2>
-            <h3 class="fs-3xl">Insights & Trends:<br /> Stay Ahead in Music Distribution</h3>
+            <h3 data-aos="zoom-in" class="fs-3xl"><?php echo strtoupper($banner_subtitle); ?></h3>
           </div>
         </div>
-      </section>   
+      </section>
       
       
       <!-- industry insights -->
+      <?php
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 6,
+    'category_name' => 'industry-insights',
+    'orderby' => 'date',
+    'order' => 'ASC',
+  );
+
+  $industry_insights = new WP_Query($args);
+  ?>
        <section class="ANS_blog-section-wrap">
         <div class="ANS_blog-section-inner ANS_container">
             <div class="top-text ANS_flex flex_align_center justify_between">
@@ -52,7 +73,7 @@ get_header();
                 <!-- blog -->
                 <div class="blog">
                     <div class="blog-thum">
-                        <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                     </div>
                     <div class="content">
                         <h4 class="fs-xl">How to Get Your First 1,000 Streams on Spotify</h4>
@@ -63,7 +84,7 @@ get_header();
                 <!-- blog -->
                 <div class="blog">
                     <div class="blog-thum">
-                        <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                     </div>
                     <div class="content">
                         <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -74,7 +95,7 @@ get_header();
                 <!-- blog -->
                 <div class="blog">
                     <div class="blog-thum">
-                        <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                     </div>
                     <div class="content">
                         <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -85,7 +106,7 @@ get_header();
                 <!-- blog -->
                 <div class="blog">
                     <div class="blog-thum">
-                        <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                     </div>
                     <div class="content">
                         <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -96,7 +117,7 @@ get_header();
                 <!-- blog -->
                 <div class="blog">
                     <div class="blog-thum">
-                        <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                     </div>
                     <div class="content">
                         <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -107,7 +128,7 @@ get_header();
                 <!-- blog -->
                 <div class="blog">
                     <div class="blog-thum">
-                        <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                     </div>
                     <div class="content">
                         <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -130,7 +151,7 @@ get_header();
                     <!-- blog -->
                     <div class="blog">
                         <div class="blog-thum">
-                            <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                         </div>
                         <div class="content">
                             <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -141,7 +162,7 @@ get_header();
                     <!-- blog -->
                     <div class="blog">
                         <div class="blog-thum">
-                            <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                         </div>
                         <div class="content">
                             <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -152,7 +173,7 @@ get_header();
                     <!-- blog -->
                     <div class="blog">
                         <div class="blog-thum">
-                            <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                         </div>
                         <div class="content">
                             <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -163,7 +184,7 @@ get_header();
                     <!-- blog -->
                     <div class="blog">
                         <div class="blog-thum">
-                            <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                         </div>
                         <div class="content">
                             <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -174,7 +195,7 @@ get_header();
                     <!-- blog -->
                     <div class="blog">
                         <div class="blog-thum">
-                            <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                         </div>
                         <div class="content">
                             <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -185,7 +206,7 @@ get_header();
                     <!-- blog -->
                     <div class="blog">
                         <div class="blog-thum">
-                            <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                         </div>
                         <div class="content">
                             <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -209,7 +230,7 @@ get_header();
                         <!-- blog -->
                         <div class="blog">
                             <div class="blog-thum">
-                                <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                             </div>
                             <div class="content">
                                 <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -220,7 +241,7 @@ get_header();
                         <!-- blog -->
                         <div class="blog">
                             <div class="blog-thum">
-                                <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                             </div>
                             <div class="content">
                                 <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -231,7 +252,7 @@ get_header();
                         <!-- blog -->
                         <div class="blog">
                             <div class="blog-thum">
-                                <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                             </div>
                             <div class="content">
                                 <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -242,7 +263,7 @@ get_header();
                         <!-- blog -->
                         <div class="blog">
                             <div class="blog-thum">
-                                <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                             </div>
                             <div class="content">
                                 <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -253,7 +274,7 @@ get_header();
                         <!-- blog -->
                         <div class="blog">
                             <div class="blog-thum">
-                                <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                             </div>
                             <div class="content">
                                 <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
@@ -264,7 +285,7 @@ get_header();
                         <!-- blog -->
                         <div class="blog">
                             <div class="blog-thum">
-                                <img src="assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
                             </div>
                             <div class="content">
                                 <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
