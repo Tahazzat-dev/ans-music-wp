@@ -7,6 +7,18 @@
 
 get_header();
 ?>
+
+<!-- Banner necessary ACF fields -->
+<?php 
+$ansmusic_office_address_1 = get_theme_mod( 'ansmusic_office_address_1', '');
+$ansmusic_office_address_2 = get_theme_mod( 'ansmusic_office_address_2', '');
+$ansmusic_office_info_email = get_theme_mod( 'ansmusic_office_info_email', '');
+$ansmusic_office_support_email = get_theme_mod( 'ansmusic_office_support_email', '');
+$ansmusic_office_contact_email = get_theme_mod( 'ansmusic_office_contact_email', '');
+$ansmusic_office_opening_time = get_theme_mod( 'ansmusic_office_opening_time', '');
+$ansmusic_footer_copyright_text = get_theme_mod( 'ansmusic_footer_copyright_text', '');
+
+?>
    <main class="ANS_main-wrapper">
       <section class="ANS_contact-banner-wrapper">
         <!-- banner content -->
@@ -14,9 +26,9 @@ get_header();
           class="ANS_contact-banner-bg"
         >
         <picture>
-            <source media="(min-width: 768px)" srcset="assets/img/contact-us-banner-large.webp">
-            <source media="(max-width: 767px)" srcset="assets/img/contact-us-banner-small.webp">
-            <img src="assets/img/contact-us-banner-large.webp" alt="Banner image">
+            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri();?>/assets/img/contact-us-banner-large.webp">
+            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri();?>/assets/img/contact-us-banner-small.webp">
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/contact-us-banner-large.webp" alt="Banner image">
         </picture>
 
 

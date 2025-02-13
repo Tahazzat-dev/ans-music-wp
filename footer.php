@@ -21,17 +21,15 @@ $group_logo_second = get_theme_mod( 'group_logo_second', '');
 $ansmusic_footer_copyright_text = get_theme_mod( 'ansmusic_footer_copyright_text', '');
 
 $ansmusic_office_address_1 = get_theme_mod( 'ansmusic_office_address_1', '');
+$ansmusic_phone_number_1 = get_theme_mod( 'ansmusic_phone_number_1', '');
 $ansmusic_office_address_2 = get_theme_mod( 'ansmusic_office_address_2', '');
 $ansmusic_office_info_email = get_theme_mod( 'ansmusic_office_info_email', '');
 $ansmusic_office_support_email = get_theme_mod( 'ansmusic_office_support_email', '');
 $ansmusic_office_contact_email = get_theme_mod( 'ansmusic_office_contact_email', '');
 $ansmusic_office_opening_time = get_theme_mod( 'ansmusic_office_opening_time', '');
 $ansmusic_footer_copyright_text = get_theme_mod( 'ansmusic_footer_copyright_text', '');
-// echo '<pre>';
-// print_r();
-// echo '</pre>';
 
-$ansmusic_phone_number = get_theme_mod( 'ansmusic_phone_number', '');
+$ansmusic_phone_number_2 = get_theme_mod( 'ansmusic_phone_number_2', '');
 $ansmusic_social_instagram = get_theme_mod( 'ansmusic_social_instagram', '');
 $ansmusic_social_facebook = get_theme_mod( 'ansmusic_social_facebook', '');
 $ansmusic_social_linkedin = get_theme_mod( 'ansmusic_social_linkedin', '');
@@ -63,6 +61,7 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
             <!-- <span class="city">Sheridan, Wyoming</span> -->
             <span class="city-address">
             <?php echo $ansmusic_office_address_1; ?> 
+            <?php echo $ansmusic_phone_number_1; ?> 
             </span>
           </address>
 
@@ -77,7 +76,7 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
             <!-- <span class="city">Sydney</span> -->
             <span class="city-address">
             <?php echo $ansmusic_office_info_email; ?> <br />
-            <?php echo $ansmusic_phone_number; ?> <br />
+            <?php echo $ansmusic_phone_number_2 ?> <br />
             <?php echo $ansmusic_office_opening_time; ?><br />
             </span>
           </address>
@@ -156,7 +155,7 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
 
           <div data-aos="zoom-in" class="phone-wrap ANS_flex flex_align_center">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.webp" alt="phone icon" />
-            <span class="nowrap fs-md"><?php echo $ansmusic_phone_number; ?></span>
+            <span class="nowrap fs-md"><?php echo $ansmusic_phone_number_2; ?></span>
           </div>
         </div>
       </div>

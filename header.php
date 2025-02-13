@@ -34,11 +34,16 @@ $ansmusic_office_info_email = get_theme_mod( 'ansmusic_office_info_email', '');
 $ansmusic_office_support_email = get_theme_mod( 'ansmusic_office_support_email', '');
 $ansmusic_office_contact_email = get_theme_mod( 'ansmusic_office_contact_email', '');
 $ansmusic_office_opening_time = get_theme_mod( 'ansmusic_office_opening_time', '');
-$ansmusic_phone_number = get_theme_mod( 'ansmusic_phone_number', '');
+$ansmusic_phone_number_1 = get_theme_mod( 'ansmusic_phone_number_1', '');
+$ansmusic_phone_number_2 = get_theme_mod( 'ansmusic_phone_number_2', '');
 $ansmusic_social_instagram = get_theme_mod( 'ansmusic_social_instagram', '');
 $ansmusic_social_facebook = get_theme_mod( 'ansmusic_social_facebook', '');
 $ansmusic_social_linkedin = get_theme_mod( 'ansmusic_social_linkedin', '');
 $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
+
+
+// get the current page slug to add active classes
+$current_slug = get_post_field('post_name', get_post());
 ?>
 <header class="ANS_header">
       <div class="ANS_header-inner ANS_flex flex_align_center justify_between">
@@ -53,13 +58,13 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
         <nav class="ANS_nav">
           <ul class="ANS_flex flex_align_center">
             <li data-aos="zoom-in-down" class="home-link">
-              <a class="active fs-base" href="<?php echo home_url(); ?>">HOME</a>
+              <a class="<?php echo is_front_page() ? 'active':''; ?> fs-base" href="<?php echo home_url(); ?>">HOME</a>
             </li>
             <li data-aos="zoom-in-down">
-              <a class="fs-base" href="<?php echo home_url(); ?>/services.html">SERVICE</a>
+              <a class="fs-base <?php echo $current_slug=="services" ? 'active':''; ?>" href="<?php echo home_url(); ?>/services">SERVICE</a>
             </li>
             <li data-aos="zoom-in-down">
-              <a class="fs-base" href="#">WHY ANS MUSIC</a>
+              <a class="fs-base <?php echo $current_slug=="why-ans-music" ? 'active':''; ?>" href="#">WHY ANS MUSIC</a>
             </li>
             <li data-aos="zoom-in-down">
               <a
@@ -70,10 +75,10 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
               >
             </li>
             <li data-aos="zoom-in-down" class="contact-link">
-              <a class="fs-base" href="<?php echo home_url(); ?>/contact-us.html">CONTACT</a>
+              <a class="fs-base <?php echo $current_slug=="contact-us" ? 'active':''; ?>" href="<?php echo home_url(); ?>/contact-us">CONTACT</a>
             </li>
             <li data-aos="zoom-in-down" class="about-link">
-              <a class="fs-base" href="<?php echo home_url(); ?>/about-us.html">ABOUT</a>
+              <a class="fs-base <?php echo $current_slug=="about-us" ? 'active':''; ?>" href="<?php echo home_url(); ?>/about-us">ABOUT</a>
             </li>
             <li data-aos="fade-left">
               <a
@@ -139,23 +144,23 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
             <ul class="ANS_menu ANS_flex flex_column">
               <li>
                 <a
-                  class="sidenav-link active fill-fade-in fill-clr-white"
+                  class="sidenav-link fill-fade-in fill-clr-white <?php echo is_front_page() ? 'active':''; ?>"
                   data-text="HOME"
-                  href="#"
+                  href="<?php echo home_url(); ?>"
                   >HOME</a
                 >
               </li>
               <li>
                 <a
-                  class="sidenav-link fill-fade-in fill-clr-white"
+                  class="sidenav-link fill-fade-in fill-clr-white  <?php echo $current_slug=="services" ? 'active':''; ?>"
                   data-text="SERVICE"
-                  href="<?php echo home_url(); ?>/services.html"
+                  href="<?php echo home_url(); ?>/services"
                   >SERVICE</a
                 >
               </li>
               <li>
                 <a
-                  class="sidenav-link fill-fade-in fill-clr-white"
+                  class="sidenav-link fill-fade-in fill-clr-white <?php echo $current_slug=="why-ans-music" ? 'active':''; ?>"
                   data-text="WHY ANS MUSIC"
                   href="#"
                   >WHY ANS MUSIC</a
@@ -171,17 +176,17 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
               </li>
               <li>
                 <a
-                  class="sidenav-link fill-fade-in fill-clr-white"
+                  class="sidenav-link fill-fade-in fill-clr-white <?php echo $current_slug=="contact-us" ? 'active':''; ?>"
                   data-text="CONTACT"
-                  href="<?php echo home_url(); ?>/contact-us.html"
+                  href="<?php echo home_url(); ?>/contact-us"
                   >CONTACT</a
                 >
               </li>
               <li>
                 <a
-                  class="sidenav-link fill-fade-in fill-clr-white"
+                  class="sidenav-link fill-fade-in fill-clr-white <?php echo $current_slug=="about-us" ? 'active':''; ?>"
                   data-text="ABOUT"
-                  href="<?php echo home_url(); ?>/about-us.html"
+                  href="<?php echo home_url(); ?>/about-us"
                   >ABOUT</a
                 >
               </li>
@@ -204,6 +209,7 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
                 <address>
                   <span class="city-address">
                   <?php echo $ansmusic_office_address_1; ?>    
+                  <?php echo $ansmusic_phone_number_1; ?>    
                 </span>
                 </address>
 
@@ -218,7 +224,7 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
                   <span class="city-address">
                     <?php echo $ansmusic_office_info_email; ?>
                     <br />
-                    <?php echo $ansmusic_phone_number; ?>
+                    <?php echo $ansmusic_phone_number_2; ?>
                     <br /> 
                     <?php echo $ansmusic_office_opening_time; ?>
                   </span>
@@ -255,7 +261,7 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
 
                 <div class="phone-wrap ANS_flex flex_align_center">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.webp" alt="phone icon" />
-                  <p class="nowrap fs-md"> <?php echo $ansmusic_phone_number; ?></p>
+                  <p class="nowrap fs-md"> <?php echo $ansmusic_phone_number_2; ?></p>
                 </div>
 
                 <!-- socical links -->

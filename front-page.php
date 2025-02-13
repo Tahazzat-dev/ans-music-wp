@@ -10,25 +10,6 @@ get_header();
 
 
 <main class="ANS_main-wrapper">
-
-<!-- test banner starts -->
-<section class="ANS_home-banner-wrapper">
- <!-- banner content -->
-   <div class="ANS_home-banner-container ANS_flex flex_column">
-     <div class="ANS_home-banner-content ANS_container">
-
-        <?php 
-$field = get_field('home_our_services_section_title');
-echo '<pre>';
-print_r($field);
-echo '</pre>';
-
-        ?>
-     </div>
-   </div>
-</section>
-<!-- test banner  ends-->
-
 <!-- banner related ACF fields -->
     <?php 
     $banner_subtitle = get_field('home_banner_subtitle');
