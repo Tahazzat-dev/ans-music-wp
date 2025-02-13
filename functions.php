@@ -57,6 +57,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 
+// load theme related gallery plugin to choose new breads and artist gallery images
+// require_once get_template_directory() . '/inc/custom-gallery.php';
+require_once get_template_directory() . '/inc/custom-acf-gallery.php';
+
+
+
 
 /**
  * =========== Enqueue scripts and styles =====================
@@ -301,3 +307,4 @@ function ans_customize_footer($wp_customize){
 	ans_customize_footer($wp_customize);
 }
 add_action('customize_register', 'ans_theme_customize_register');
+
