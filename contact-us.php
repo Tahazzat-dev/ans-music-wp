@@ -12,12 +12,17 @@ get_header();
 <?php 
 $ansmusic_office_address_1 = get_theme_mod( 'ansmusic_office_address_1', '');
 $ansmusic_office_address_2 = get_theme_mod( 'ansmusic_office_address_2', '');
+$ansmusic_phone_number_1 = get_theme_mod( 'ansmusic_phone_number_1', '');
+$ansmusic_phone_number_2 = get_theme_mod( 'ansmusic_phone_number_2', '');
 $ansmusic_office_info_email = get_theme_mod( 'ansmusic_office_info_email', '');
 $ansmusic_office_support_email = get_theme_mod( 'ansmusic_office_support_email', '');
 $ansmusic_office_contact_email = get_theme_mod( 'ansmusic_office_contact_email', '');
 $ansmusic_office_opening_time = get_theme_mod( 'ansmusic_office_opening_time', '');
 $ansmusic_footer_copyright_text = get_theme_mod( 'ansmusic_footer_copyright_text', '');
 
+// banner background image
+$large_banner = get_field( 'contact_us_banner_background_image_large_devices', '');
+$small_banner = get_field( 'contact_us_banner_background_image_small_devices', '');
 ?>
    <main class="ANS_main-wrapper">
       <section class="ANS_contact-banner-wrapper">
@@ -26,9 +31,9 @@ $ansmusic_footer_copyright_text = get_theme_mod( 'ansmusic_footer_copyright_text
           class="ANS_contact-banner-bg"
         >
         <picture>
-            <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri();?>/assets/img/contact-us-banner-large.webp">
-            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri();?>/assets/img/contact-us-banner-small.webp">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/contact-us-banner-large.webp" alt="Banner image">
+            <source media="(min-width: 768px)" srcset="<?php echo $large_banner; ?>">
+            <source media="(max-width: 767px)" srcset="<?php echo $small_banner;?>">
+            <img src="<?php echo $large_banner; ?>" alt="Banner image">
         </picture>
 
 
@@ -42,22 +47,22 @@ $ansmusic_footer_copyright_text = get_theme_mod( 'ansmusic_footer_copyright_text
                     <!-- contact info card -->
                     <div class="contact-info-card">
                         <h4 data-aos="fade-up"  class="fs-md icon-box location-mark">Office addresses</h4>
-                        <p data-aos="fade-up" class="icon-box arrow-location">30 N Gould St Ste R Sheridan WY 82801 USA</p>
-                        <p data-aos="fade-up" class="icon-box phone">+1(307)2042560</p>
+                        <p data-aos="fade-up" class="icon-box arrow-location"> <?php echo $ansmusic_office_address_1; ?> </p>
+                        <p data-aos="fade-up" class="icon-box phone"><?php echo $ansmusic_phone_number_1; ?> </p>
                     </div>
 
                     <div class="contact-info-card">
                         <h4 data-aos="fade-up" class="fs-md icon-box location-mark">Office addresses</h4>
-                        <p data-aos="fade-up" class="icon-box arrow-location">21/A New Eskaton Road, Dhaka – 1000, Bangladesh.</p>
-                        <p data-aos="fade-up" class="icon-box phone">+88 09611444739</p>
-                        <p data-aos="fade-up" class="icon-box time-glass">Mon-Fri 11am-5pm</p>
+                        <p data-aos="fade-up" class="icon-box arrow-location"><?php echo $ansmusic_office_address_2; ?>    </p>
+                        <p data-aos="fade-up" class="icon-box phone"><?php echo $ansmusic_phone_number_2 ?></p>
+                        <p data-aos="fade-up" class="icon-box time-glass"><?php echo $ansmusic_office_opening_time; ?></p>
                     </div>
                     <!-- contact info card -->
                     <div class="contact-info-card">
                       <h4 data-aos="fade-up" class="fs-md icon-box group-arrow">Our Emails</h4>
-                      <p data-aos="fade-up" class="icon-box email">info@ansmusiclimited.com</p>
-                      <p data-aos="fade-up" class="icon-box email">support@ansmusiclimited.com</p>
-                      <p data-aos="fade-up" class="icon-box email">contact@ansmusiclimited.com</p>
+                      <p data-aos="fade-up" class="icon-box email"><?php echo $ansmusic_office_info_email; ?></p>
+                      <p data-aos="fade-up" class="icon-box email"><?php echo $ansmusic_office_support_email; ?></p>
+                      <p data-aos="fade-up" class="icon-box email"><?php echo $ansmusic_office_contact_email; ?></p>
                     </div>
                     <!-- contact info card -->
                 </div>

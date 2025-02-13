@@ -16,3 +16,5 @@ echo 'Test hello world';
 
 
 // <?php echo get_field(''); ?>
+
+<?php echo $b; ?>

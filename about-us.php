@@ -7,6 +7,15 @@
 
 get_header();
 ?>
+
+<?php
+// about us page customization related ACF fields
+
+$banner_large_background = get_field('about_us_banner_large_background');
+$banner_small_background = get_field('about_us_banner_small_background');
+$banner_title = get_field('about_us_banner_title');
+$banner_subtitle = get_field('about_us_banner_subtitle');
+?>
  <main class="ANS_main-wrapper">
       <section class="ANS_about-banner-wrapper">
         <!-- banner content -->
@@ -14,13 +23,13 @@ get_header();
           <picture>
             <source
               media="(min-width: 768px)"
-              srcset="assets/img/about-us-banner-bg.jpg"
+              srcset="<?php echo $banner_large_background; ?>"
             />
             <source
               media="(max-width: 767px)"
-              srcset="assets/img/about-us-banner-bg.jpg"
+              srcset="<?php echo $banner_small_background; ?>"
             />
-            <img  data-aos="fade-down" src="assets/img/about-us-banner-bg.jpg" alt="Banner image" />
+            <img  data-aos="fade-down" src="<?php echo $banner_large_background; ?>" alt="Banner image" />
           </picture>
 
           <div class="banner-overlay"></div>
@@ -32,57 +41,36 @@ get_header();
             class="ANS_about-banner-content ANS_container ANS_flex flex_column flex_align_center justify_center"
           >
             <h2 class="text-fill neon-stroke fs-6xl">
-              <span data-aos="zoom-in" data-text="ABOUT US">ABOUT US</span>
+              <span data-aos="zoom-in" data-text="<?php echo strtoupper($banner_title); ?>"><?php echo strtoupper($banner_title); ?></span>
             </h2>
-            <h3 data-aos="zoom-in" class="fs-3xl">Start something amazing</h3>
+            <h3 data-aos="zoom-in" class="fs-3xl"><?php echo strtoupper($banner_subtitle); ?></h3>
           </div>
         </div>
       </section>
 
+<!-- company history, mission, vision related ACF fields -->
+      <?php
+      $company_history = get_field('company_history');
+      $company_mission = get_field('company_mission');
+      $company_vision = get_field('company_vision');
+      ?>
        <!-- about ANS starts-->
  <section class="ANS_history-wrap">
     <div class="ANS_history-inner ANS_container ANS_flex flex_align_center">
       <div class="thum-container">
         <img
         data-aos="fade-down"
-          src="assets/img/company-history-thum.png"
+          src="<?php echo $company_history['image'] ?>"
           alt="section thumnail"
         />
       </div>
       <div class="history-content">
         <h3  data-aos="zoom-in-up" class="fs-2xl section_title">
-          MUSIC DISTRIBUTION EVERYWHERE YOU NEED IT - WORLDWIDE.
+        <?php echo $company_history['title'] ?>
         </h3>
 
         <p  data-aos="zoom-in-up">
-          Founded in 2022, ANS Music is a globally recognized music
-          distribution, video distribution, and publishing administration
-          company that operates at the cutting edge of the music industry.
-          As a multifaceted entity, we serve as a record label, audio-visual
-          production house, and media tech company, providing artists with
-          all the tools they need to succeed in today’s digital landscape.
-          Our services include free music distribution, video distribution,
-          royalty collection, rights management, and marketing. We connect
-          our artists to over 300 major platforms, including Spotify, Apple
-          Music, TikTok, YouTube, and VEVO, ensuring maximum exposure across
-          the globe. Unlike traditional models, we operate on a
-          partnership/revenue-sharing basis, allowing artists to retain 100%
-          ownership of their copyrights.
-        </p>
-        <p  data-aos="zoom-in-up">
-          ANS Music is committed to empowering artists by providing them
-          with top-tier services at no upfront cost. As proud members of the
-          American Association of Independent Music (A2IM) and the
-          Bangladesh Association of Software and Information Services
-          (BASIS), we uphold the highest industry standards and continuously
-          strive to foster innovation.
-        </p>
-        <p  data-aos="zoom-in-up">
-          Headquartered in Dhaka, Bangladesh, with legal incorporations in
-          the USA, UK, and Bangladesh, ANS Music is strategically positioned
-          to support artists worldwide. Whether you’re a seasoned musician
-          or an emerging talent, we are here to help you reach your audience
-          and succeed in the ever-evolving music industry.
+        <?php echo $company_history['description'] ?>
         </p>
       </div>
     </div>
@@ -93,36 +81,17 @@ get_header();
 <section class="ANS_history-wrap">
     <div class="ANS_history-inner ANS_container ANS_flex flex_align_center">
       <div class="history-content">
-        <h3  data-aos="zoom-in-up" class="fs-2xl section_title">Our Mission:</h3>
+        <h3  data-aos="zoom-in-up" class="fs-2xl section_title"><?php echo $company_mission['title']; ?></h3>
 
         <p  data-aos="zoom-in-up">
-          To provide artists with unparalleled distribution and promotional
-          services, helping them maintain control over their work while
-          reaching a global audience.
-        </p>
-        <p  data-aos="zoom-in-up">
-          ANS Music is committed to empowering artists by providing them
-          with top-tier services at no upfront cost. As proud members of the
-          American Association of Independent Music (A2IM) and the
-          Bangladesh Association of Software and Information Services
-          (BASIS), we uphold the highest industry standards and continuously
-          strive to foster innovation.
-        </p>
-        <p  data-aos="zoom-in-up">
-          Headquartered in Dhaka, Bangladesh, with legal incorporations in
-          the USA, UK, and Bangladesh, ANS Music is strategically positioned
-          to support artists worldwide. Whether you’re a seasoned musician
-          or an emerging talent, we are here to help you reach your audience
-          and succeed in the ever-evolving music industry.
+        <?php echo $company_mission['description'] ?>
         </p>
 
         <!-- divider -->
         <div class="ANS_section-divider"></div>
-        <h3  data-aos="zoom-in-up" class="fs-2xl section_title">Our Vision:</h3>
+        <h3  data-aos="zoom-in-up" class="fs-2xl section_title">  <?php echo $company_vision['title'] ?></h3>
         <p  data-aos="zoom-in-up">
-          To be a leading force in the global music industry, shaping the
-          future of music distribution and empowering independent artists to
-          thrive.
+        <?php echo $company_vision['description'] ?>
         </p>
       </div>
     </div>
@@ -130,35 +99,52 @@ get_header();
 <!-- ANS history ends -->
 
 
+<!-- total distributed analytics related ACF fields -->
+ <?php
+   $music_distributed = get_field('music_distributed');
+      $video_distributed = get_field('video_distributed');
+ ?>
   <!-- ANS analytics starts -->
   <section class="ANS_analytics-wrap">
     <div class="ANS_analytics-inner ANS_container">
       <div class="content ANS_flex">
         <div class="total-distributed-music">
-          <h4  data-aos="zoom-in-up" class="fs-4xl">16000+</h4>
-          <p  data-aos="zoom-in-up">Music track distributed</p>
+          <h4  data-aos="zoom-in-up" class="fs-4xl"><?php echo $music_distributed['total_distributed_amount']; ?>+</h4>
+          <p  data-aos="zoom-in-up"><?php echo $music_distributed['title']; ?></p>
         </div>
 
         <div class="total-distributed-video">
-          <h4  data-aos="zoom-in-up" class="fs-4xl">4000+</h4>
-          <p  data-aos="zoom-in-up">Video content distributed</p>
+        <h4  data-aos="zoom-in-up" class="fs-4xl"><?php echo $video_distributed['total_distributed_amount']; ?>+</h4>
+        <p  data-aos="zoom-in-up"><?php echo $video_distributed['title']; ?></p>
         </div>
       </div>
     </div>
   </section>
   <!-- ANS analytics ends -->
 
+  <!-- Team info related ACF fields -->
+ <?php
+   $team_info_section_title = get_field('team_info_section_title');
+ ?>
     <!-- our team -->
     <section class="ANS_team-wrap">
         <div class="ANS_team-inner ANS_container">
           <div class="top-text">
             <h2 class="section-title text-fill neon-stroke fs-6xl">
-              <span  data-aos="zoom-in-up" data-text="OUR">OUR</span> <br />
-              <span  data-aos="zoom-in-up" data-text="PEOPLE">PEOPLE</span>
+            <?php 
+                if (!empty($team_info_section_title)) {
+                    $words = explode(' ', strtoupper($team_info_section_title));
+                    foreach ($words as $index => $word) {
+                        echo '<span data-aos="zoom-in-up" data-text="' . esc_attr($word) . '">' . esc_html($word) . '</span>';
+                        if ($index < count($words) - 1) {
+                            echo '<br />';
+                        }
+                    }
+                }
+            ?>
             </h2>
             <h4  data-aos="zoom-in-up"  class="fs-2xl section-subtitle">
-              Meet our team—empowering artists and shaping the future of music
-              distribution.
+             <?php echo get_field('teaminfo_section_subtitle');?>
             </h4>
           </div>
    
