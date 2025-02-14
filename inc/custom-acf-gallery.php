@@ -16,7 +16,7 @@ function add_custom_gallery_to_front_page_acf($field) {
             <?php foreach ($images as $image) : ?>
                 <div class="gallery-image" style="display:inline-block;position:relative;margin:5px;">
                     <img src="<?php echo esc_url($image); ?>" style="width:100px;height:auto;">
-                    <button type="button" class="gallery-image-remove" style="position:absolute;top:0;right:0;background:red;color:white;border:none;padding:2px 5px;cursor:pointer;">X</button>
+                    <button type="button" class="gallery-image-remove" style="position:absolute;top:0;right:0;background:red;color:white;border:none;padding:2px 5px;cursor:pointer;border-radius:50%;">X</button>
                 </div>
             <?php endforeach; ?>
         </div>

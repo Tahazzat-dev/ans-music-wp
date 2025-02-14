@@ -120,7 +120,7 @@ $current_slug = get_post_field('post_name', get_post());
             } elseif (is_page()) {
                 echo get_the_title();
             } elseif (is_single()) {
-                echo get_the_title();
+                echo "BLOG";
             } else {
                 echo 'INTRO'; 
             }
@@ -233,31 +233,7 @@ $current_slug = get_post_field('post_name', get_post());
 
               <div class="ANS_contact-form-wrap">
                 <h5 class="fs-md">Start A Conversation</h5>
-                <form class="ANS_contact-form ANS_flex flex_column" action="">
-                  <input name="name" id="name" type="text" placeholder="Name" />
-                  <input
-                    name="email"
-                    id="email"
-                    type="email"
-                    placeholder="Email"
-                  />
-                  <textarea
-                    rows="1"
-                    name="message"
-                    id="message"
-                    type="text"
-                    placeholder="Message"
-                  ></textarea>
-                  <input
-                    name="verifyNnonce"
-                    id="verifyNnonce"
-                    placeholder="What is 1+2=?"
-                    type="text"
-                  />
-                  <button type="submit" class="fs-base ANS_btn btn-b-yellow">
-                    SEND
-                  </button>
-                </form>
+                <?php get_template_part('template-parts/contact', 'form'); ?>
 
                 <div class="phone-wrap ANS_flex flex_align_center">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.webp" alt="phone icon" />
@@ -310,169 +286,7 @@ $current_slug = get_post_field('post_name', get_post());
             <div
               class="our-partners-wrapper marquee-container ANS_flex flex_column"
             >
-              <div
-                class="ANS_partners-inner ANS_container ANS_marquee-slider-wrapper"
-              >
-                <div class="ANS_flex flex_align_center ANS_marquee-slider">
-                  <img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/apple.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Spotify.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/amazon.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tidal-b.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Facebook.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tiktok.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/vevo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/napster.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/YouTube01.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/resso.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Deezer_logo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Pandora.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/instagram.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/apple.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Spotify.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/amazon.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tidal-b.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Facebook.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tiktok.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/vevo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/napster.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/YouTube01.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/resso.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Deezer_logo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Pandora.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/instagram.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/apple.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Spotify.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/amazon.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tidal-b.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Facebook.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tiktok.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/vevo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/napster.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/YouTube01.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/resso.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Deezer_logo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Pandora.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/instagram.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  />
-                </div>
-              </div>
+              <?php get_template_part('template-parts/content', 'partners'); ?>
             </div>
           </div>
         </div>

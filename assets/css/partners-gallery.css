@@ -1,0 +1,37 @@
+.custom-gallery-preview {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.custom-gallery-preview img{
+        max-width: 100%;
+        object-fit: contain;
+        background: black;
+        max-width: 90px !important;
+}
+
+.custom-gallery-thumbnail {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.gallery-image-preview {
+    position: relative;
+}
+
+.delete-image-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 50%;
+}

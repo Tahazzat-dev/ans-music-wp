@@ -28,10 +28,10 @@ function ans_render_team_details_metabox($post) {
                     <input type="text" name="ans_team_details[<?php echo $index; ?>][name]" value="<?php echo esc_attr($member['name'] ?: ''); ?>" placeholder="Name">
                     <label>Role:</label>
                     <input type="text" name="ans_team_details[<?php echo $index; ?>][role]" value="<?php echo esc_attr($member['role'] ?: ''); ?>" placeholder="Role">
+                    <label>Linkedin URL:</label>
+                    <input type="text" name="ans_team_details[<?php echo $index; ?>][linked_in_url]" value="<?php echo esc_attr($member['linked_in_url'] ?: ''); ?>" placeholder="Linkedin URL">
                     <label>Profile Image:</label>
-                    <div style="display:block;" class="img-preview">
-                        <img width='420' height='300' src="<?php echo esc_attr($member['profile'] ?: ''); ?>" alt="Team image">
-                    </div>
+                    <img class='ans-profile-preview' src="<?php echo esc_attr($member['profile'] ?: ''); ?>" style='max-width: 150px; display: block; margin-top: 10px; margin-bottom:10px;'>
                         <input type="hidden" class="ans-team-profile-url" name="ans_team_details[<?php echo $index; ?>][profile]" value="<?php echo esc_attr($member['profile'] ?: ''); ?>">
                     <button class="ans-upload-profile button">Update Profile Image</button>
                     <br />
@@ -77,14 +77,13 @@ function ans_admin_team_details_scripts() {
                         <input type='text' name='ans_team_details[\${index}][name]' placeholder='Name'>
                         <label>Role:</label>
                         <input type='text' name='ans_team_details[\${index}][role]' placeholder='Role'>
+                        <label>Linkedin URL:</label>
+                    <input type='text' name='ans_team_details[\${index}][linked_in_url]'  placeholder='Linkedin URL'>
                         <label>Profile Image:</label>
-                        <div style='display:none;' class='img-preview'>
-                            <img width='420' height='300' src='' alt='Team image'>
-                        </div>
+                        <img class='ans-profile-preview' src='' style='max-width: 100px; display: none; margin-top: 10px;'>
                         <input type='hidden' class='ans-team-profile-url' name='ans_team_details[\${index}][profile]'>
                         <button class='ans-upload-profile button'>Upload Profile Image</button>
                         <br />
-                        <img class='ans-profile-preview' src='' style='max-width: 100px; display: none; margin-top: 10px;'>
                         <label>Description:</label>
                         <textarea name='ans_team_details[\${index}][des]' placeholder='Description'></textarea>
                         <button class='ans-remove-team-member button button-secondary'>Remove</button>

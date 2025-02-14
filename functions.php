@@ -11,11 +11,17 @@ if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
+
+function my_custom_image_sizes() {
+    add_image_size('custom-size', 300, 200, true); // 300px wide by 200px tall, cropped
+}
+add_action('after_setup_theme', 'my_custom_image_sizes');
+
 function ansmusic_setup() {
 	load_theme_textdomain( 'ansmusic', get_template_directory() . '/languages' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support('post-thumbnails');
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -64,9 +70,6 @@ require_once get_template_directory() . '/inc/custom-acf-gallery.php';
 
 // load theme related our team details adding features.
 require_once get_template_directory() . '/inc/our-team-member-post-meta.php';
-
-
-
 
 /**
  * =========== Enqueue scripts and styles =====================
@@ -304,12 +307,55 @@ function ans_customize_footer($wp_customize){
 
 }
 
+/*====== partners galler  ========*/ 
+function ans_partners_gallery($wp_customize){
+   // Add section for the gallery
+   $wp_customize->add_section('custom_gallery_section', array(
+    'title' => __('Partners Gallery', 'ansmusic'),
+    'priority' => 30,
+));
+
+// Add hidden setting for the gallery images (comma-separated list)
+$wp_customize->add_setting('custom_gallery_images', array(
+    'default' => '',
+    'sanitize_callback' => 'theme_sanitize_gallery_images',
+));
+
+// Add textarea control (hidden by default) for gallery images URLs
+$wp_customize->add_control('custom_gallery_images_control', array(
+    'label' => __('Gallery Images (hidden)', 'ansmusic'),
+    'section' => 'custom_gallery_section',
+    'settings' => 'custom_gallery_images',
+    'type' => 'textarea',
+    'description' => 'This textarea stores the image URLs (hidden from view).',
+    'input_attrs' => array(
+        'style' => 'display: none;',
+    ),
+));
+}
 
  function ans_theme_customize_register($wp_customize) {
 	 ans_customize_color_section($wp_customize);
 	 ans_header_customization($wp_customize);
 	 ans_customize_necessary_info($wp_customize);
 	ans_customize_footer($wp_customize);
+	ans_partners_gallery($wp_customize);
 }
 add_action('customize_register', 'ans_theme_customize_register');
 
+// sanitize images
+function theme_sanitize_gallery_images($value) {
+    if (empty($value)) return '';
+    
+    // Sanitize and split URLs by commas
+    $images = explode(',', $value);
+    $images = array_map('esc_url_raw', $images);
+    return implode(',', $images); // Save as a comma-separated list
+}
+
+// Enqueue customizer scripts and styles
+function theme_customize_scripts() {
+    wp_enqueue_script('gallery-customizer-js', get_template_directory_uri() . '/assets/js/partners-gallery.js', array('jquery'), null, true);
+    wp_enqueue_style('gallery-customizer-css', get_template_directory_uri() . '/assets/css/partners-gallery.css');
+}
+add_action('customize_controls_enqueue_scripts', 'theme_customize_scripts');

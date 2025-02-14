@@ -19,7 +19,6 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
  <main class="ANS_main-wrapper">
 
  <!-- test banner -->
- <section class="ANS_about-banner-wrapper">
       <section class="ANS_about-banner-wrapper">
         <!-- banner content -->
         <div class="ANS_about-banner-bg">
@@ -217,39 +216,39 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
             </h4>
           </div>
 
+
+          <?php
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 10,
+    'category_name' => 'our-expertise',
+    'orderby' => 'date',
+    'order' => 'ASC',
+  );
+
+  $expertise_query = new WP_Query($args);
+
+  ?>
           <div class="ANS_expertise-container">
 
-            <!-- expertise cards -->
-            <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/knowledge-icon.svg" alt="Expertise image">
-                    <h5  data-aos="zoom-in-up" class="name">Music Industry Knowledge</h5>
+<?php
+          if ($expertise_query->have_posts()):
+      while ($expertise_query->have_posts()):
+        $expertise_query->the_post();
+
+        $expertise_icon = get_field('our-expertise-icon', get_the_ID());
+        ?>
+   <!-- expertise cards -->
+   <a href="#" class="expertise-card" title="click for details" >
+                    <img  data-aos="zoom-in" src="<?php echo $expertise_icon; ?>" alt="Expertise image">
+                    <h5  data-aos="zoom-in-up" class="name"><?php the_title(); ?></h5>
             </a>
             <!-- expertise cards -->
-            <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/distribution-network.svg" alt="Expertise image">
-                    <h5  data-aos="zoom-in-up" class="name">Digital & Physical Distribution Networks</h5>
-            </a>
-            <!-- expertise cards -->
-            <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/meta-data-management-and-right-administration.svg" alt="Expertise image">
-                    <h5  data-aos="zoom-in-up" class="name">Metadata Management & Rights Administration</h5>
-            </a>
-            <!-- expertise cards -->
-            <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/marketing-and-distribution-icon.svg" alt="Expertise image">
-                    <h5  data-aos="zoom-in-up" class="name">Marketing & Promotion Strategies</h5>
-            </a>
-            <!-- expertise cards -->
-            <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/technology-and-software-development.svg" alt="Expertise image">
-                    <h5  data-aos="zoom-in-up" class="name">Technology & Software Development</h5>
-            </a>
-            <!-- expertise cards -->
-            <a href="#" class="expertise-card" title="click for details" >
-                    <img  data-aos="zoom-in" src="<?php echo get_template_directory_uri(); ?>/assets/icons/legal-and-licencing-icon.svg" alt="Expertise image">
-                    <h5  data-aos="zoom-in-up" class="name">Legal & Licensing Expertise</h5>
-            </a>
-            <!-- expertise cards -->
+<?php
+      endwhile;
+      wp_reset_postdata();
+    endif;
+    ?>
           </div>
     </div>
   </section>

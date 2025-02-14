@@ -62,244 +62,168 @@ $banner_subtitle = get_field('blogs_banner_subtitle');
   );
 
   $industry_insights = new WP_Query($args);
-  echo "<pre>";
-  print_r($industry_insights);
-  echo "</pre>";
   ?>
        <section class="ANS_blog-section-wrap">
         <div class="ANS_blog-section-inner ANS_container">
             <div class="top-text ANS_flex flex_align_center justify_between">
-                <h3 class="fs-4xl">Industry insights</h3> <a class="ANS_btn btn-b-yellow nowrap" href="#">View All</a>
+                <h3 class="fs-4xl">Industry insights</h3> <a class="ANS_btn btn-b-yellow nowrap" href="<?php echo site_url("/category"."/industry-insights") ?>">View All</a>
             </div>
-
             <div class="ANS_blogs">
-                <!-- blog -->
-                <div class="blog">
-                    <div class="blog-thum">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
+            <?php
+            if ($industry_insights->have_posts()) {
+                while ($industry_insights->have_posts()) {
+                    $industry_insights->the_post();
+                    ?>
+                    <!-- blog -->
+                    <div class="blog">
+                        <div class="blog-thum">
+                            <!-- <img src="echo get_the_post_thumbnail();" alt="Blog thumnail"> -->
+                            <?php the_post_thumbnail();?>
+                        </div>
+                        <div class="content">
+                            <h4 class="fs-xl"><?php
+                            $blog_title = get_the_title();
+                            $max_length = 65;
+                            if (strlen($blog_title) > $max_length) {
+                                echo substr($blog_title, 0, $max_length) . '...';
+                            } else {
+                                the_title();
+                            }
+                            ?></h4>
+                            <p><?php echo get_the_date('M j, Y'); ?></p>
+                            <a class="ANS_btn btn-b-yellow" href="<?php the_permalink(); ?>">Read More</a>
+                        </div>
                     </div>
-                    <div class="content">
-                        <h4 class="fs-xl">How to Get Your First 1,000 Streams on Spotify</h4>
-                    <p>Jan 16, 2025</p>
-                    <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                    </div>
-                </div>
-                <!-- blog -->
-                <div class="blog">
-                    <div class="blog-thum">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                    </div>
-                    <div class="content">
-                        <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                    <p>Jan 16, 2025</p>
-                    <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                    </div>
-                </div>
-                <!-- blog -->
-                <div class="blog">
-                    <div class="blog-thum">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                    </div>
-                    <div class="content">
-                        <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                    <p>Jan 16, 2025</p>
-                    <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                    </div>
-                </div>
-                <!-- blog -->
-                <div class="blog">
-                    <div class="blog-thum">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                    </div>
-                    <div class="content">
-                        <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                    <p>Jan 16, 2025</p>
-                    <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                    </div>
-                </div>
-                <!-- blog -->
-                <div class="blog">
-                    <div class="blog-thum">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                    </div>
-                    <div class="content">
-                        <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                    <p>Jan 16, 2025</p>
-                    <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                    </div>
-                </div>
-                <!-- blog -->
-                <div class="blog">
-                    <div class="blog-thum">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                    </div>
-                    <div class="content">
-                        <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                    <p>Jan 16, 2025</p>
-                    <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                    </div>
-                </div>
-                <!-- blog -->
+                    <!-- blog -->
+                    <?php
+                }
+                ?>
             </div>
+            <?php
+            } else {
+                echo "<p>No blog found in this category.</p>";
+            }
+            wp_reset_postdata();
+            ?>
         </div>
        </section>
-           <!-- ANS Music updates -->
-           <section class="ANS_blog-section-wrap">
-            <div class="ANS_blog-section-inner ANS_container">
-                <div class="top-text ANS_flex flex_align_center justify_between">
-                    <h3 class="fs-4xl">ANS Music updates</h3> <a class="ANS_btn btn-b-yellow nowrap" href="#">View All</a>
-                </div>
-    
-                <div class="ANS_blogs">
-                    <!-- blog -->
-                    <div class="blog">
-                        <div class="blog-thum">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                        </div>
-                        <div class="content">
-                            <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                        <p>Jan 16, 2025</p>
-                        <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                        </div>
-                    </div>
-                    <!-- blog -->
-                    <div class="blog">
-                        <div class="blog-thum">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                        </div>
-                        <div class="content">
-                            <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                        <p>Jan 16, 2025</p>
-                        <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                        </div>
-                    </div>
-                    <!-- blog -->
-                    <div class="blog">
-                        <div class="blog-thum">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                        </div>
-                        <div class="content">
-                            <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                        <p>Jan 16, 2025</p>
-                        <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                        </div>
-                    </div>
-                    <!-- blog -->
-                    <div class="blog">
-                        <div class="blog-thum">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                        </div>
-                        <div class="content">
-                            <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                        <p>Jan 16, 2025</p>
-                        <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                        </div>
-                    </div>
-                    <!-- blog -->
-                    <div class="blog">
-                        <div class="blog-thum">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                        </div>
-                        <div class="content">
-                            <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                        <p>Jan 16, 2025</p>
-                        <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                        </div>
-                    </div>
-                    <!-- blog -->
-                    <div class="blog">
-                        <div class="blog-thum">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                        </div>
-                        <div class="content">
-                            <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                        <p>Jan 16, 2025</p>
-                        <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                        </div>
-                    </div>   
-                    <!-- blog -->
-                </div>
-            </div>
-           </section>
 
-             <!-- ANS Music updates -->
-             <section class="ANS_blog-section-wrap">
-                <div class="ANS_blog-section-inner ANS_container">
-                    <div class="top-text ANS_flex flex_align_center justify_between">
-                        <h3 class="fs-4xl">Featured artists & success stories</h3> <a class="ANS_btn btn-b-yellow nowrap" href="#">View All</a>
+
+        <!-- ANS Music Updates -->
+      <?php
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 6,
+    'category_name' => 'ans-music-updates',
+    'orderby' => 'date',
+    'order' => 'ASC',
+  );
+
+  $ans_music_updates = new WP_Query($args);
+  ?>
+       <section class="ANS_blog-section-wrap">
+        <div class="ANS_blog-section-inner ANS_container">
+            <div class="top-text ANS_flex flex_align_center justify_between">
+                <h3 class="fs-4xl">ANS Music updates</h3> <a class="ANS_btn btn-b-yellow nowrap" href="<?php echo site_url("/category"."/ans-music-updates") ?>">View All</a>
+            </div>
+            <div class="ANS_blogs">
+            <?php
+            if ($ans_music_updates->have_posts()) {
+                while ($ans_music_updates->have_posts()) {
+                    $ans_music_updates->the_post();
+                    ?>
+                    <!-- blog -->
+                    <div class="blog">
+                        <div class="blog-thum">
+                            <!-- <img src="echo get_the_post_thumbnail();" alt="Blog thumnail"> -->
+                            <?php the_post_thumbnail();?>
+                        </div>
+                        <div class="content">
+                            <h4 class="fs-xl"><?php
+                            $blog_title = get_the_title();
+                            $max_length = 65;
+                            if (strlen($blog_title) > $max_length) {
+                                echo substr($blog_title, 0, $max_length) . '...';
+                            } else {
+                                the_title();
+                            }
+                            ?></h4>
+                            <p><?php echo get_the_date('M j, Y'); ?></p>
+                            <a class="ANS_btn btn-b-yellow" href="<?php the_permalink(); ?>">Read More</a>
+                        </div>
                     </div>
-        
-                    <div class="ANS_blogs">
-                        <!-- blog -->
-                        <div class="blog">
-                            <div class="blog-thum">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                            </div>
-                            <div class="content">
-                                <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                            <p>Jan 16, 2025</p>
-                            <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                            </div>
+                    <!-- blog -->
+                    <?php
+                }
+                ?>
+            </div>
+            <?php
+            } else {
+                echo "<p>No blog found in this category.</p>";
+            }
+            wp_reset_postdata();
+            ?>
+        </div>
+       </section>
+
+
+         <!-- ANS Music Updates -->
+<?php
+  $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 6,
+    'category_name' => 'featured-artists-and-success-stories',
+    'orderby' => 'date',
+    'order' => 'ASC',
+  );
+
+  $featured_artists_and_success_stories = new WP_Query($args);
+  ?>
+       <section class="ANS_blog-section-wrap">
+        <div class="ANS_blog-section-inner ANS_container">
+            <div class="top-text ANS_flex flex_align_center justify_between">
+                <h3 class="fs-4xl">Featured artists & success stories</h3> <a class="ANS_btn btn-b-yellow nowrap" href="<?php echo site_url("/category"."/featured-artists-and-success-stories") ?>">View All</a>
+            </div>
+            <div class="ANS_blogs">
+            <?php
+            if ($featured_artists_and_success_stories->have_posts()) {
+                while ($featured_artists_and_success_stories->have_posts()) {
+                    $featured_artists_and_success_stories->the_post();
+                    ?>
+                    <!-- blog -->
+                    <div class="blog">
+                        <div class="blog-thum">
+                            <!-- <img src="echo get_the_post_thumbnail();" alt="Blog thumnail"> -->
+                            <?php the_post_thumbnail();?>
                         </div>
-                        <!-- blog -->
-                        <div class="blog">
-                            <div class="blog-thum">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                            </div>
-                            <div class="content">
-                                <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                            <p>Jan 16, 2025</p>
-                            <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                            </div>
+                        <div class="content">
+                            <h4 class="fs-xl"><?php
+                            $blog_title = get_the_title();
+                            $max_length = 65;
+                            if (strlen($blog_title) > $max_length) {
+                                echo substr($blog_title, 0, $max_length) . '...';
+                            } else {
+                                the_title();
+                            }
+                            ?></h4>
+                            <p><?php echo get_the_date('M j, Y'); ?></p>
+                            <a class="ANS_btn btn-b-yellow" href="<?php the_permalink(); ?>">Read More</a>
                         </div>
-                        <!-- blog -->
-                        <div class="blog">
-                            <div class="blog-thum">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                            </div>
-                            <div class="content">
-                                <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                            <p>Jan 16, 2025</p>
-                            <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                            </div>
-                        </div>
-                        <!-- blog -->
-                        <div class="blog">
-                            <div class="blog-thum">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                            </div>
-                            <div class="content">
-                                <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                            <p>Jan 16, 2025</p>
-                            <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                            </div>
-                        </div>
-                        <!-- blog -->
-                        <div class="blog">
-                            <div class="blog-thum">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                            </div>
-                            <div class="content">
-                                <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                            <p>Jan 16, 2025</p>
-                            <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                            </div>
-                        </div>
-                        <!-- blog -->
-                        <div class="blog">
-                            <div class="blog-thum">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/decentralize-the-music-industry.avif" alt="Blog thumnail">
-                            </div>
-                            <div class="content">
-                                <h4 class="fs-xl">4 Steps for Artists and Labels to Prepare for the U.S. TikTok Ban</h4>
-                            <p>Jan 16, 2025</p>
-                            <a class="ANS_btn btn-b-yellow" href="#">Read More</a>
-                            </div>
-                        </div>
-                        <!-- blog -->
                     </div>
-                </div>
-               </section>
+                    <!-- blog -->
+                    <?php
+                }
+                ?>
+            </div>
+            <?php
+            } else {
+                echo "<p>No blog found in this category.</p>";
+            }
+            wp_reset_postdata();
+            ?>
+        </div>
+       </section>
+
 
                  <!-- different stores -->
       <section class="ANS_different-stores-wrap">
@@ -312,169 +236,7 @@ $banner_subtitle = get_field('blogs_banner_subtitle');
             </div>
 
             <div class="slider_wrap">
-                  <div
-                class="ANS_partners-inner ANS_container ANS_marquee-slider-wrapper"
-              >
-                <div class="ANS_flex flex_align_center ANS_marquee-slider">
-                  <img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/apple.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Spotify.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/amazon.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tidal-b.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Facebook.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tiktok.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/vevo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/napster.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/YouTube01.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/resso.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Deezer_logo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Pandora.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/instagram.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/apple.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Spotify.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/amazon.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tidal-b.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Facebook.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tiktok.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/vevo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/napster.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/YouTube01.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/resso.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Deezer_logo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Pandora.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/instagram.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/apple.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Spotify.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/amazon.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tidal-b.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Facebook.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/tiktok.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/vevo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/napster.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/YouTube01.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/resso.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Deezer_logo.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/Pandora.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  /><img
-                    src="https://gallery.vision/wp-content/themes/Gallery-Vision/assets/images/instagram.webp"
-                    alt="icon"
-                    class="md:!mx-10 mx-5 mt-2 md:!max-h-[38px] max-h-[20px]"
-                  />
-                </div>
-              </div>
+              <?php get_template_part('template-parts/content', 'partners'); ?>
             </div>
         </div>
        </section>
