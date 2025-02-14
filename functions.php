@@ -62,6 +62,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require_once get_template_directory() . '/inc/custom-acf-gallery.php';
 
 
+// load theme related our team details adding features.
+require_once get_template_directory() . '/inc/our-team-member-post-meta.php';
+
+
 
 
 /**

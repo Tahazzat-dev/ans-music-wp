@@ -62,6 +62,9 @@ $banner_subtitle = get_field('blogs_banner_subtitle');
   );
 
   $industry_insights = new WP_Query($args);
+  echo "<pre>";
+  print_r($industry_insights);
+  echo "</pre>";
   ?>
        <section class="ANS_blog-section-wrap">
         <div class="ANS_blog-section-inner ANS_container">

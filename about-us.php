@@ -17,6 +17,9 @@ $banner_title = get_field('about_us_banner_title');
 $banner_subtitle = get_field('about_us_banner_subtitle');
 ?>
  <main class="ANS_main-wrapper">
+
+ <!-- test banner -->
+ <section class="ANS_about-banner-wrapper">
       <section class="ANS_about-banner-wrapper">
         <!-- banner content -->
         <div class="ANS_about-banner-bg">
@@ -147,31 +150,29 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
              <?php echo get_field('teaminfo_section_subtitle');?>
             </h4>
           </div>
-   
+            <?php $team_data = get_post_meta(get_the_ID(),'ans_team_details', true ); ?>
           <div class="ANS_teams-container ANS_flex flex_column">
-            <!-- team details box -->
+
+          <?php
+          if(!empty($team_data)){
+            foreach($team_data as $team){
+              ?>
+
+                   <!-- team details box -->
             <div class="ANS_team-details ANS_flex flex_align_center">
               <div class="team-profile">
-                <img  data-aos="fade-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/ceo-and-founder.jpg" alt="Team member" />
+                <img  data-aos="fade-down" src="<?php echo $team['profile'] ?>" alt="Team member" />
               </div>
               <div class="role">
-                <h5  data-aos="zoom-in-up" class="fs-2xl">CEO & Founder</h5>
+                <h5  data-aos="zoom-in-up" class="fs-2xl"><?php echo $team['role'] ?></h5>
               </div>
               <div class="content">
-                <h5  data-aos="zoom-in-up" class="name">AKASH SARKER</h5>
+                <h5  data-aos="zoom-in-up" class="name"><?php echo $team['name'] ?></h5>
     
-                <p  data-aos="zoom-in-up" class="des">
-                  Meet our head honcho, Josh, aka “The poor man’s Michael
-                  Scott”. Outside of spending way too much time writing the
-                  staff profiles for this page, talking about his doggo and
-                  watching The Office the US version, I believe in being up
-                  front and transparent in my approach and I wanted to take the
-                  time to write to you about what we do, how we do it, and why
-                  we do it.
-                </p>
+                <p  data-aos="zoom-in-up" class="des"><?php echo $team['des'] ?></p>
     
                 <div class="team-social-links ANS_flex flex_align_center">
-                  <a  data-aos="zoom-in-up" href="#" target="_blank"
+                  <a  data-aos="zoom-in-up" href="<?php echo $team['linked_in_url'] ?>" target="_blank"
                     ><img
                       data-aos="zoom-in"
                       src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
@@ -182,143 +183,11 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
               </div>
             </div>
             <!-- team details box -->
-            <div class="ANS_team-details ANS_flex flex_align_center">
-              <div class="content">
-                <h5  data-aos="zoom-in-up" class="name">JOSH WHITE</h5>
-    
-                <p  data-aos="zoom-in-up" class="des">
-                  vision to be a world class digital agency, which he’s been
-                  doing since its inception. His strategic and enthusiastic
-                  approach to digital has enabled the team at Neon Treehouse to
-                  deliver killer campaigns time after time. Whilst patriotically
-                  born and raised in Adelaide, Josh spends his time currently
-                  split between the Melbourne and Adelaide offices in his vision
-                  to grow the business across Australia and beyond.
-                </p>
-    
-                <div class="team-social-links ANS_flex flex_align_center">
-                  <a  data-aos="zoom-in-up" href="#" target="_blank"
-                    ><img
-                      data-aos="zoom-in"
-                      src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
-                      alt="Linkedin icon"
-                      class="aos-init aos-animate"
-                  /></a>
-                </div>
-              </div>
-              <div class="role">
-                <h5  data-aos="zoom-in-up" class="fs-2xl">OPERATIONS MANAGER</h5>
-              </div>
-              <div class="team-profile">
-                <img data-aos="fade-down" src="<?php echo get_template_directory_uri(); ?>/assets/img/other-team-member.png" alt="Team member" />
-              </div>
-            </div>
-            <!-- team details box -->
-            <div class="ANS_team-details ANS_flex flex_align_center">
-              <div class="team-profile">
-                <img
-                data-aos="fade-down"
-                  src="<?php echo get_template_directory_uri(); ?>/assets/img/other-team-member-5.png"
-                  alt="Team member"
-                />
-              </div>
-              <div class="role">
-                <h5  data-aos="zoom-in-up" class="fs-2xl">FRONTEND WEB DEVELOPER</h5>
-              </div>
-              <div class="content">
-                <h5  data-aos="zoom-in-up" class="name">Arianna Guiao</h5>
-    
-                <p  data-aos="zoom-in-up" class="des">
-                  Meet Arianna, our Frontend Web Developer and the queen of
-                  tackling anything that comes her way! Arianna is one of our
-                  go-getters. Her remarkable ability to continuously explore new
-                  challenges and consistently learn new methods to enhance her
-                  skill set in web-related tasks is truly commendable. We deeply
-                  appreciate her dedication and the expertise she has brought
-                  into the Treehouse.
-                </p>
-    
-                <div class="team-social-links ANS_flex flex_align_center">
-                  <a  data-aos="zoom-in-up" href="#" target="_blank"
-                    ><img
-                      data-aos="zoom-in"
-                      src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
-                      alt="Linkedin icon"
-                      class="aos-init aos-animate"
-                  /></a>
-                </div>
-              </div>
-            </div>
-            <!-- team details box -->
-            <div class="ANS_team-details ANS_flex flex_align_center">
-              <div class="content">
-                <h5  data-aos="zoom-in-up" class="name">Michael Chiu</h5>
-    
-                <p  data-aos="zoom-in-up" class="des">
-                  For the first few weeks, the top phrase used to describe
-                  Michael was “the nicest guy ever!” This very quickly was
-                  accompanied by terms like “what a gun”, “knows his shit”, and
-                  “you can count on him”. After working on the Huawei account
-                  with an international media agency in Hong Kong for a number
-                  of years, Michael joined us in Adelaide bringing an
-                  unparalleled depth of
-                </p>
-    
-                <div class="team-social-links ANS_flex flex_align_center">
-                  <a  data-aos="zoom-in-up" href="#" target="_blank"
-                    ><img
-                      data-aos="zoom-in"
-                      src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
-                      alt="Linkedin icon"
-                      class="aos-init aos-animate"
-                  /></a>
-                </div>
-              </div>
-              <div class="role">
-                <h5  data-aos="zoom-in-up" class="fs-2xl">HEAD OF AD STRATEGY</h5>
-              </div>
-              <div class="team-profile">
-                <img
-                data-aos="fade-down"
-                  src="<?php echo get_template_directory_uri(); ?>/assets/img/other-team-member-2.png"
-                  alt="Team member"
-                />
-              </div>
-            </div>
-            <!-- team details box -->
-            <div class="ANS_team-details ANS_flex flex_align_center">
-              <div class="team-profile">
-                <img
-                data-aos="fade-down"
-                  src="<?php echo get_template_directory_uri(); ?>/assets/img/other-team-member-4.png"
-                  alt="Team member"
-                />
-              </div>
-              <div class="role">
-                <h5  data-aos="zoom-in-up" class="fs-2xl">HEAD OF CREATIVE</h5>
-              </div>
-              <div class="content">
-                <h5  data-aos="zoom-in-up" class="name">Agnes Martins</h5>
-    
-                <p  data-aos="zoom-in-up" class="des">
-                  Agnes is a woman of many talents! She is our superstar Head of
-                  Creative at the Treehouse! If her amazing hair doesn’t impress
-                  you enough, how about the fact that she has even written and
-                  published a book!
-                </p>
-    
-                <div class="team-social-links ANS_flex flex_align_center">
-                  <a  data-aos="zoom-in-up" href="#" target="_blank"
-                    ><img
-                      data-aos="zoom-in"
-                      src="<?php echo get_template_directory_uri(); ?>/assets/img/linkedin-icon.webp"
-                      alt="Linkedin icon"
-                      class="aos-init aos-animate"
-                  /></a>
-                </div>
-              </div>
-            </div>
-            <!-- team details box -->
+
+<?php
+            }
+          }
+          ?>
           </div>
         </div>
       </section>
