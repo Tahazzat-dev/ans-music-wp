@@ -205,9 +205,9 @@ get_header();
 
   <!-- music sales and tracking starts -->
    <div class="ANS_music-sales-tracking-wrap">
-    <div class="ANS_music-sales-tracking-inner ANS_flex flex_column">
-      <div class="ANS_flex flex_align_center">
-      <div class="main-thum">
+    <div class="ANS_music-sales-tracking-inner ANS_container ANS_flex flex_column">
+      <div class="ANS_flex flex_align_center justify_between sales-report">
+      <div class="main-thum thum">
     <div class="big-circle">
       <div class="icon-block">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/dsplogo/amazon.svg" alt="web design icon" />
@@ -246,14 +246,13 @@ get_header();
           Release as much music as you want, whenever you want.</p>
           </div>
       </div>
-      <div class="ANS_flex flex_align_center">
+      <div class="ANS_flex flex_align_center justify_between dive-deeper">
       <div class="content">
-          <h3 class="fs-2xl">Sell your music Unlimited & everywhere.</h3>   
-          <p>Release your music on all major platforms.
-          Release as much music as you want, whenever you want.</p>
+          <h3 class="fs-2xl">Dive deeper into your data.</h3>   
+          <p>Monitor your sales, streams and earnings data in a dedicated analytics portal. Access comprehensive daily trend reports and transparent monthly statements.</p>
           </div>
       <div class="thum">
-            <img src="" alt="section thumnail">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sales-analaytics-thum.svg" alt="section thumnail">
           </div>
           
       </div>

@@ -848,9 +848,50 @@ left: 0;
  /* seles and tracking info starts */
 
 
+ .ANS_music-sales-tracking-wrap{
+  padding: 120px 0;
+ }
+
+ .ANS_music-sales-tracking-inner.flex_column{
+  gap: 50px;
+  max-width: 1300px;
+ }
+
+ .ANS_music-sales-tracking-inner.flex_column .ANS_flex{
+   padding: 30px 20px;
+   gap: 40px;
+  }
+  .ANS_music-sales-tracking-inner.flex_column .ANS_flex .thum{
+    min-width: 380px;
+  }
+
+ .ANS_music-sales-tracking-inner.flex_column .sales-report{
+    background: radial-gradient(circle at 50% 125%,hsla(0,1%,78%,.213) 0,hsla(0,0%,7%,.5) 60%);
+ }
+
+ .ANS_music-sales-tracking-inner.flex_column .dive-deeper{
+  background: radial-gradient(circle at 70% 50%,hsla(0,1%,78%,.213) 0,hsla(0,0%,7%,.5) 40%);
+  padding: 20px 0;
+}
+
+ .ANS_music-sales-tracking-inner .thum:last-of-type{
+
+  /* background:url('../img/dive-deeper-into-data-section-thum.png'); */
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 60%;
+ }
+
+ .ANS_music-sales-tracking-inner .content{
+  max-width: 600px;
+ }
+
+ .ANS_music-sales-tracking-inner .content h3{
+  margin-bottom: 5px;
+ }
+
 
  .ANS_music-sales-tracking-inner .main-thum {
-  margin: 0px auto;
   width: 380px;
   height: 380px;
   position: relative;
@@ -870,9 +911,10 @@ left: 0;
   animation: Rotate 20s linear infinite;
   -webkit-animation: Rotate 20s linear infinite;
 }
+
 .ANS_music-sales-tracking-inner .icon-block {
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   border-radius: 50%;
   display: flex;
@@ -881,8 +923,6 @@ left: 0;
   -webkit-align-items: center;
   justify-content: center;
   -webkit-justify-content: center;
-  background-image: linear-gradient(180deg, #4967e6 0%, #627bf4 100%);
-  -webkit-background-image: linear-gradient(180deg, #4967e6 0%, #627bf4 100%);
   box-shadow: 0 2px 4px 0 var(--light-yellow);
   -webkit-box-shadow: 0 2px 4px 0 var(--light-yellow);
 }
@@ -1019,6 +1059,8 @@ left: 0;
     -webkit-transform: rotate(-405deg);
   }
 }
+
+
 
 
  /* key services */
@@ -2018,6 +2060,10 @@ gap: 35px;
   max-height: 30px; 
  }
 
+ .ANS_music-sales-tracking-wrap{
+  padding: 100px 0;
+ }
+
  /* key services */
  .ANS_key-services-wrap{
   width: 100%;
@@ -2071,6 +2117,7 @@ gap: 35px;
 
 
   /* end */
+
 
 }
 
@@ -2199,6 +2246,7 @@ gap: 35px;
 }
 
 
+
 }
 
 /* tablets ( extra large )  */
@@ -2284,6 +2332,11 @@ gap: 35px;
   .ANS_home-widgets-wrap{
     padding: 90px 0;
   }
+
+  .ANS_music-sales-tracking-wrap{
+    padding: 90px 0;
+   }
+
   /* key service style  */
   .ANS_key-services-wrap .top-text {
     text-align: left;
@@ -2394,6 +2447,7 @@ gap: 35px;
 }
 
 
+
 }
 
 /* tablets ( medium )  */
@@ -2422,6 +2476,48 @@ gap: 35px;
   padding-top: 10px;
   padding-bottom: 50px;
 }
+
+/* dive deeper into your data */
+
+.ANS_music-sales-tracking-wrap{
+  padding: 80px 0;
+ }
+
+
+ .ANS_music-sales-tracking-inner.flex_column .sales-report{
+  flex-direction: column-reverse;
+  padding: 30px 0;
+ }
+
+ .ANS_music-sales-tracking-inner.flex_column .dive-deeper{
+  flex-direction: column;
+  gap: 50px;
+ }
+
+ .ANS_music-sales-tracking-inner.flex_column .dive-deeper{
+  background: radial-gradient(circle at 50% 60%,hsla(0,1%,78%,.213) 0,hsla(0,0%,7%,.5) 40%);
+  padding: 20px 0;
+}
+
+.ANS_music-sales-tracking-inner.flex_column .ANS_flex .thum{
+  min-width: 300px;
+}
+
+
+.ANS_music-sales-tracking-inner .main-thum {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+
+
+.ANS_music-sales-tracking-inner .icon-block {
+  width: 40px;
+  height: 40px;
+}
+
+
 
 
 
@@ -2532,6 +2628,7 @@ gap: 35px;
 .ANS_blog-wrapper{
   padding:80px 0;
 }
+
 
 
 }
@@ -2780,7 +2877,37 @@ padding: 0;
   gap: 30px;
 }
 
+.ANS_music-sales-tracking-wrap{
+  padding: 70px 0;
+ }
 
+ .ANS_music-sales-tracking-inner.flex_column .ANS_flex .thum {
+  min-width: 200px;
+}
+
+.ANS_music-sales-tracking-inner .main-thum {
+  width: 200px;
+  height: 200px;
+  /* overflow: hidden; */
+}
+
+.ANS_music-sales-tracking-inner .icon-block {
+  width: 30px;
+  height: 30px;
+}
+
+.ANS_music-sales-tracking-inner .big-circle ,
+.ANS_music-sales-tracking-inner .circle{
+  border: 1px solid var(--light-yellow);
+}
+
+.ANS_music-sales-tracking-inner.flex_column .dive-deeper {
+  background: radial-gradient(circle at 50% 75%,hsla(0, 1%, 78%, 0.15) 0,hsla(0,0%,7%,.5) 40%);
+}
+
+.ANS_music-sales-tracking-inner.flex_column .dive-deeper .thum {
+  min-width: 230px;
+}
 /* ===== about us ========= */
 .ANS_history-wrap {
   padding-top: 70px;
@@ -2845,6 +2972,7 @@ padding: 0;
 .ANS_blog-wrapper{
   padding:70px 0;
 }
+
 
 
 
