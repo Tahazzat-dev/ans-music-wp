@@ -42,21 +42,20 @@ get_header();
         <div class="ANS_about-banner-container ANS_flex flex_column">
             <div class="ANS_about-banner-content ANS_container ANS_flex flex_column flex_align_center justify_center">
                 <h2 class="fade-up  fs-4xl">
-                        <?php echo strtoupper($category->name); ?>
+                        CATEGORY: <?php echo strtoupper($category->name); ?>
                 </h2>
                 <!-- <h3 data-aos="zoom-in" class="fs-3xl"><?php // echo strtoupper($banner_subtitle); ?></h3> -->
             </div>
         </div>
     </section>
 
-
     <!-- industry insights -->
   
     <section class="ANS_blog-section-wrap">
         <div class="ANS_blog-section-inner ANS_container">
-            <div class="top-text ANS_flex flex_align_center justify_between">
-                <h3 class="fs-4xl"><?php echo $category->name; ?></h3>
-            </div>
+            <!-- <div class="top-text ANS_flex flex_align_center justify_between">
+                <h3 class="fs-4xl"><?php // echo $category->name; ?></h3>
+            </div> -->
             <?php
             if ($posts->have_posts()) {
                 echo '<div class="ANS_blogs">';
