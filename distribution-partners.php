@@ -11,15 +11,15 @@ get_header();
 <?php
 // about us page customization related ACF fields
 
-$banner_large_background = get_field('about_us_banner_large_background');
-$banner_small_background = get_field('about_us_banner_small_background');
-$banner_title = get_field('about_us_banner_title');
-$banner_subtitle = get_field('about_us_banner_subtitle');
+$banner_large_background = get_field('distribution_partners_banner_large_background');
+$banner_small_background = get_field('distribution_partners_banner_small_background');
+$banner_title = get_field('distribution_partners_banner_title');
+$banner_subtitle = get_field('distribution_partners_banner_subtitle');
 ?>
  <main class="ANS_main-wrapper">
 
  <!-- test banner -->
-      <section class="ANS_about-banner-wrapper">
+      <section class="ANS_about-banner-wrapper ANS_distribution-partners-banner-wrap">
         <!-- banner content -->
         <div class="ANS_about-banner-bg">
           <picture>
@@ -42,9 +42,18 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
           <div
             class="ANS_about-banner-content ANS_container ANS_flex flex_column flex_align_center justify_center"
           >
-            <h2 class="text-fill neon-stroke fs-6xl">
-              <span data-aos="zoom-in" data-text="<?php echo strtoupper($banner_title); ?>"><?php echo strtoupper($banner_title); ?></span>
-            </h2>
+            <h2 class="text-center text-fill neon-stroke fs-6xl">
+            <?php
+          if (!empty($banner_title)) {
+            $words = explode(' ', strtoupper($banner_title));
+            foreach ($words as $index => $word) {
+              echo '<span data-aos="zoom-in" data-text="' . esc_attr($word) . '">' . esc_html($word) . '</span>';
+              if ($index < count($words) - 1) {
+                echo '<br />';
+              }
+            }
+          }
+          ?>
             <h3 data-aos="zoom-in" class="fs-3xl"><?php echo strtoupper($banner_subtitle); ?></h3>
           </div>
         </div>

@@ -541,8 +541,16 @@ z-index: 99;
   width: 100%;
 }
 
+
+.ANS_footer .footer-logo-wrap{
+  max-width:130px;
+  margin-bottom: 20px;
+}
+
 .ANS_footer .footer-des img{
-margin-bottom: 20px;
+width:100%;
+  height:auto
+
 }
 
 .ANS_footer .footer-contact-info{
@@ -1347,6 +1355,7 @@ left: 0;
   z-index: 0;
 }
 
+
 .ANS_about-banner-bg{
   position: absolute;
   top: 0;
@@ -2031,6 +2040,14 @@ gap: 35px;
 
 
 /* ===== next label distribution page ======== */
+
+.ANS_distribution-partners-banner-wrap{
+  width: 100%;
+  height: 60vh !important;
+  height: 60vh !important;
+  min-height: 550px !important;
+}
+
 .ANS_next-label-distribution-wrap{
   padding: 120px 0;
 }
@@ -2068,10 +2085,6 @@ gap: 35px;
   margin: 8px 0;
 }
 
-
-.ANS_next-label-distribution-inner{}
-.ANS_next-label-distribution-inner{}
-.ANS_next-label-distribution-inner{}
 
 
 
@@ -2643,6 +2656,16 @@ gap: 35px;
 
 
 /* ===== next label distribution page ======== */
+
+.ANS_distribution-partners-wrap .distribution-partners {
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 25px;
+}
+
+.ANS_distribution-partners-wrap .card img {
+  width: 40px;
+}
+
 .ANS_next-label-distribution-wrap{
   padding: 90px 0;
 }
@@ -2654,6 +2677,8 @@ gap: 35px;
 .ANS_next-label-distribution-inner .section-thum{
   margin: 50px 0;
 }
+
+
 
 
 
