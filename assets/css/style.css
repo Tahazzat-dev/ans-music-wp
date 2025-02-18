@@ -2087,6 +2087,22 @@ gap: 35px;
 
 
 
+/* ========= single features post ======= */
+.ANS_single-feature-wrap h5{
+  margin-bottom: 20px;
+}
+.ANS_single-feature-wrap .ANS_about-banner-content p{
+  margin-top: 5px;
+}
+
+.features-wrap .text-center{
+  display: block !important;
+}
+.features-wrap .distribution-partners{
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-content: center;
+}
 
 
 /* ================= 

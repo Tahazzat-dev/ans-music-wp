@@ -359,3 +359,86 @@ function theme_customize_scripts() {
     wp_enqueue_style('gallery-customizer-css', get_template_directory_uri() . '/assets/css/partners-gallery.css');
 }
 add_action('customize_controls_enqueue_scripts', 'theme_customize_scripts');
+
+
+
+// ====== custom post type =========
+function register_distribution_partners_cpt() {
+    $labels = array(
+        'name'               => 'Distribution Partners',
+        'singular_name'      => 'Distribution Partner',
+        'menu_name'          => 'Distribution Partners',
+        'name_admin_bar'     => 'Distribution Partner',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New Partner',
+        'new_item'           => 'New Partner',
+        'edit_item'          => 'Edit Partner',
+        'view_item'          => 'View Partner',
+        'all_items'          => 'All Partners',
+        'search_items'       => 'Search Partners',
+        'not_found'          => 'No partners found',
+        'not_found_in_trash' => 'No partners found in Trash'
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'distribution-partners'),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'menu_icon'          => 'dashicons-groups', 
+        'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+        'show_in_rest'       => true,
+    );
+
+    register_post_type('partners', $args);
+}
+add_action('init', 'register_distribution_partners_cpt');
+
+
+
+
+// ====== custom post type =========
+function register_features_cpt() {
+    $labels = array(
+        'name'               => 'Features',
+        'singular_name'      => 'Feature',
+        'menu_name'          => 'Features',
+        'name_admin_bar'     => 'Feature',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New Feature',
+        'new_item'           => 'New Feature',
+        'edit_item'          => 'Edit Feature',
+        'view_item'          => 'View Feature',
+        'all_items'          => 'All Features',
+        'search_items'       => 'Search Features',
+        'not_found'          => 'No Features found',
+        'not_found_in_trash' => 'No Features found in Trash'
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'features'),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'menu_icon'          => 'dashicons-nametag', 
+        'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+        'show_in_rest'       => true,
+    );
+
+    register_post_type('features', $args);
+}
+add_action('init', 'register_features_cpt');

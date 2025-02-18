@@ -11,13 +11,14 @@ get_header();
 <?php
 // about us page customization related ACF fields
 
-$banner_large_background = get_field('about_us_banner_large_background');
-$banner_small_background = get_field('about_us_banner_small_background');
-$banner_title = get_field('about_us_banner_title');
-$banner_subtitle = get_field('about_us_banner_subtitle');
+$banner_large_background = get_field('next_label_distribution_banner_large_background');
+$banner_small_background = get_field('next_label_distribution_banner_large_background');
+$banner_title_top = get_field('next_label_distribution_banner_title_top');
+$banner_title_bottom = get_field('next_label_distribution_banner_title_bottom');
+$banner_subtitle = get_field('next_label_distribution_banner_subtitle');
 ?>
  <main class="ANS_main-wrapper">
-      <section class="ANS_about-banner-wrapper">
+      <section class="ANS_about-banner-wrapper ANS_distribution-partners-banner-wrap">
         <!-- banner content -->
         <div class="ANS_about-banner-bg">
           <picture>
@@ -36,12 +37,13 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
         </div>
 
         <!-- banner content -->
-        <div class="ANS_about-banner-container ANS_flex flex_column">
+        <div class="ANS_about-banner-container ANS_flex flex_column ">
           <div
             class="ANS_about-banner-content ANS_container ANS_flex flex_column flex_align_center justify_center"
           >
-            <h2 class="text-fill neon-stroke fs-6xl">
-              <span data-aos="zoom-in" data-text="<?php echo strtoupper($banner_title); ?>"><?php echo strtoupper($banner_title); ?></span>
+            <h2 class="text-center text-fill neon-stroke fs-6xl">
+              <span data-aos="zoom-in" data-text="<?php echo strtoupper($banner_title_top); ?>"><?php echo strtoupper($banner_title_top); ?></span> <br />
+              <span data-aos="zoom-in" data-text="<?php echo strtoupper($banner_title_bottom); ?>"><?php echo strtoupper($banner_title_bottom); ?></span>
             </h2>
             <h3 data-aos="zoom-in" class="fs-3xl"><?php echo strtoupper($banner_subtitle); ?></h3>
           </div>
@@ -51,110 +53,61 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
 
       <!-- services -->
 
-      <div class="ANS_next-label-distribution-wrap">
+      <?php
+        $next_distribution_services = get_field('next_label_distribution_features');
+//         echo '<pre>';
+// print_r($next_distribution_services);
+// echo '</pre>';
+      ?>
+
+      <section class="ANS_next-label-distribution-wrap">
           <div class="ANS_next-label-distribution-inner ANS_flex ANS_container flex_column">
-
-
-          <!-- distribution info -->
+            <?php 
+            foreach ($next_distribution_services as $distribution):
+              ?>
+                <!-- distribution info -->
            <div class="distribution-container">
-             <h3 class="fs-4xl">Catalog Management</h3>
-             <p class="fs-base">
-             Don’t just manage your catalog—own it. Revelator Pro gives you full control, centralizing your digital assets so you can focus on developing your artists, boosting revenue, and scaling your label. Optimize metadata for global reach and unlock new monetization opportunities across platforms. Distribute seamlessly, monetize effortlessly, and stay ahead with tools like DSP integration and Dolby Atmos support. Keep your label agile, your vision clear, and your business thriving in an ever-evolving market.
-             </p>
+             <h3 class="fs-4xl"><?php echo $distribution['title'];?></h3>
+             <p class="fs-base"><?php echo $distribution['description'];?></p>
 
              <div class="section-thum">
-                 <img src="https://www.datocms-assets.com/116987/1727946997-catalog-management-solutions.png?auto=format" alt="section thumnail">
+                 <img src="<?php echo $distribution['feature_thum'];?>" alt="section thumnail">
              </div>
 
               <div class="key-features">
                 <h4 class="fs-3xl feature-title">Key Features</h4>
 
                 <div class="features">
-                    <!-- feature card -->
+                  <?php
+                   if(!empty($distribution['key_features'])):
+                    foreach($distribution['key_features'] as $key_feature):
+                      ?>
+                      <!-- feature card -->
                     <div class="feature-card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
-                    <h4 class="fs-xl">Centralized Asset Control</h4>
-                    <p>Manage all assets from one platform.</p>
+                    <h4 class="fs-xl"><?php echo $key_feature['title'] ?></h4>
+                    <p><?php echo $key_feature['description'] ?></p>
                     </div>
                     <!-- feature card -->
-                    <div class="feature-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
-                    <h4 class="fs-xl">Centralized Asset Control</h4>
-                    <p>Manage all assets from one platform.</p>
-                    </div>
-                    <!-- feature card -->
-                    <div class="feature-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
-                    <h4 class="fs-xl">Centralized Asset Control</h4>
-                    <p>Manage all assets from one platform.</p>
-                    </div>
-                    <!-- feature card -->
-                    <div class="feature-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
-                    <h4 class="fs-xl">Centralized Asset Control</h4>
-                    <p>Manage all assets from one platform.</p>
-                    </div>
-                    <!-- feature card -->
-                    <div class="feature-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
-                    <h4 class="fs-xl">Centralized Asset Control</h4>
-                    <p>Manage all assets from one platform.</p>
-                    </div>
-                </div> 
-              </div>
-           </div>
-          <!-- distribution info -->
-           <div class="distribution-container">
-             <h3 class="fs-4xl">Catalog Management</h3>
-             <p class="fs-base">
-             Don’t just manage your catalog—own it. Revelator Pro gives you full control, centralizing your digital assets so you can focus on developing your artists, boosting revenue, and scaling your label. Optimize metadata for global reach and unlock new monetization opportunities across platforms. Distribute seamlessly, monetize effortlessly, and stay ahead with tools like DSP integration and Dolby Atmos support. Keep your label agile, your vision clear, and your business thriving in an ever-evolving market.
-             </p>
-
-             <div class="section-thum">
-                 <img src="https://www.datocms-assets.com/116987/1727946997-catalog-management-solutions.png?auto=format" alt="section thumnail">
-             </div>
-
-              <div class="key-features">
-                <h4 class="fs-3xl feature-title">Key Features</h4>
-
-                <div class="features">
-                    <!-- feature card -->
-                    <div class="feature-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
-                    <h4 class="fs-xl">Centralized Asset Control</h4>
-                    <p>Manage all assets from one platform.</p>
-                    </div>
-                    <!-- feature card -->
-                    <div class="feature-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
-                    <h4 class="fs-xl">Centralized Asset Control</h4>
-                    <p>Manage all assets from one platform.</p>
-                    </div>
-                    <!-- feature card -->
-                    <div class="feature-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
-                    <h4 class="fs-xl">Centralized Asset Control</h4>
-                    <p>Manage all assets from one platform.</p>
-                    </div>
-                    <!-- feature card -->
-                    <div class="feature-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
-                    <h4 class="fs-xl">Centralized Asset Control</h4>
-                    <p>Manage all assets from one platform.</p>
-                    </div>
-                    <!-- feature card -->
-                    <div class="feature-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
-                    <h4 class="fs-xl">Centralized Asset Control</h4>
-                    <p>Manage all assets from one platform.</p>
-                    </div>
+                    <?php 
+                    endforeach;
+                   endif; 
+                   ?>
                 </div>
               </div>
            </div>
-
            <!-- distribution info -->
+            <?php endforeach;?>
           </div>
-      </div>
+      </section>
+
+
+       <!-- our partners -->
+  <section class="ANS_partners-wrap">
+    <?php get_template_part('template-parts/content', 'partners'); ?>
+  </section>
+  <section class="ANS_partners-wrap">
+  </section>
 
       
     </main>
