@@ -84,13 +84,20 @@
       ".ANS_distribution-partners-inner .card"
     );
 
+    let currentBounds;
     cards.forEach((card) => {
-        console.log(card);
+      card.addEventListener('mouseenter', ()=>{
+        currentBounds = card.getBoundingClientRect();
+      })
+      card.addEventListener('mouseleave', ()=>{
+        card.style.transform = "rotate3d(0, 0, 0, 0deg) skew(0deg, 0deg) scale(1)";
+      })
       card.addEventListener("mousemove", handleMouseMove);
 
     });
 
     function handleMouseMove(e) {
+      if (!currentBounds) return; // Prevent errors
       const rect = this.getBoundingClientRect();
       const mouseX = e.clientX - rect.left - rect.width / 2;
       const mouseY = e.clientY - rect.top - rect.height / 2;
@@ -100,6 +107,34 @@
       angle = (angle + 360) % 360;
 
       this.style.setProperty("--start", angle + 60);
+
+       const mX = e.clientX;
+       const mY = e.clientY;
+      const leftX = mX - currentBounds.x;
+      const topY = mY - currentBounds.y;
+      const center = {
+        x: leftX - currentBounds.width / 2,
+        y: topY - currentBounds.height / 2
+      }
+      const distance = Math.sqrt(center.x**2 + center.y**2);
+      const rotationAngle = Math.min(Math.log(distance) * 5, 25); // Increased for more rotation
+      const skewX = center.x / 25; // Added skew effect
+      const skewY = center.y / 25; // Added skew effect
+    
+      // Smooth animation with requestAnimationFrame
+  requestAnimationFrame(() => {
+    this.style.transform = `
+      rotate3d(
+        ${center.y / 100},
+        ${-center.x / 100},
+        0,
+        ${rotationAngle}deg
+      )
+      skew(${skewX}deg, ${skewY}deg)
+      scale(1.05) /* Slight scale-up for better effect */
+    `;
+  });
+      
     }
   });
 })(jQuery);

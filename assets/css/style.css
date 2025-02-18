@@ -1925,8 +1925,11 @@ gap: 35px;
   background-color: rgba(128, 128, 128, 0.129);
   backdrop-filter: blur(10px);
   position: relative;
-  transition: border-color 0.3s ease-in-out;
+  transition: 
+  border-color 0.3s ease-in-out,
+  transform 0.3s ease-out;
   --start: 0;
+  transform: rotate3d(0);
 }
 
 .ANS_distribution-partners-wrap .card::before {
