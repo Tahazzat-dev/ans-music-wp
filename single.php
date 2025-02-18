@@ -29,6 +29,7 @@ get_header();
         <!-- banner content -->
         <div class="ANS_about-banner-container ANS_flex flex_column">
           <div
+           style="max-width:1000px; overflow: hidden;"
             class="ANS_about-banner-content ANS_container ANS_flex flex_column flex_align_center justify_center"
           >
             <h2 class="fs-4xl">
@@ -39,7 +40,7 @@ get_header();
       </section>
 
       <section class="ANS_blog-wrapper">
-        <div class="ANS_container">
+        <div class="">
             <?php the_content(); ?>
         </div>
       </section>
