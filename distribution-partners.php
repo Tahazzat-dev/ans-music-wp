@@ -65,254 +65,212 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="partners icon">
                     <h3 class="fs-xl">Amazon</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/anghami.svg';?>" alt="iTunes">
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/anghami.svg';?>" alt="partners icon">
                     <h3 class="fs-xl">Anghami</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/audiomack.svg';?>" alt="iTunes">
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/audiomack.svg';?>" alt="partners icon">
                     <h3 class="fs-xl">Audiomack</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/awa.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">AWA</h3>
+                </div>
+                <!-- card -->
+                <div class="card">
+                      <div class="glow"></div>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/boomplay.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Boomplay</h3>
+                </div>
+                <!-- card -->
+                <div class="card">
+                      <div class="glow"></div>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/deezer.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Deezer</h3>
+                </div>
+                <!-- card -->
+                <div class="card">
+                      <div class="glow"></div>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/facebook.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Facebook</h3>
+                </div>
+                <!-- card -->
+                <div class="card">
+                      <div class="glow"></div>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/flo.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Flo</h3>
+                </div>
+                <!-- card -->
+                <div class="card">
+                      <div class="glow"></div>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/hungama.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Hungama</h3>
+                </div>
+                <!-- card -->
+                <div class="card">
+                      <div class="glow"></div>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/iheart.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">iHeartRadio</h3>
+                </div>
+                <!-- card -->
+                <div class="card">
+                      <div class="glow"></div>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/imusica.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">iMusica</h3>
+                </div>
+                <!-- card -->
+                <div class="card">
+                      <div class="glow"></div>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/itunes.svg';?>" alt="partners icon">
                     <h3 class="fs-xl">iTunes</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/jaxsta.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Jaxta</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/joox.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">JOOX</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/kkbox.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">KKBOX</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/lickd.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">LICKD</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/mixcloud.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Mixcloud</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/napster.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Napster</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/netease.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">NetEase</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/nuuday.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Nuuday</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/pandora.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Pandora</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/peloton.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Peloton</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/pretzel.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Pretzel</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/saavn.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Jiosaavn</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/shazam.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Shazam</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/snap.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Snapchat</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/soundcloud.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Soundcloud</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/spotify.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Spotify</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/tencent.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Tencent</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/tidal.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Tidal</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/tiktok.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">TikTok</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/trebel.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Trebel</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/tune-global.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">Tune Global</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/youtube-music.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">YouTube Music</h3>
                 </div>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
-                </div>
-                <!-- card -->
-                <div class="card">
-                      <div class="glow"></div>
-                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/amazon.svg';?>" alt="iTunes">
-                    <h3 class="fs-xl">iTunes</h3>
+                    <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/youtube.svg';?>" alt="partners icon">
+                    <h3 class="fs-xl">YouTube</h3>
                 </div>
                 <!-- card -->
            </div>
