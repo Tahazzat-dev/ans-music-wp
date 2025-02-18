@@ -1787,7 +1787,7 @@ object-fit: cover;
 
 .ANS_service-container .content h3{
   /* font-family: var(--ff-road-rage); */
-  color: var(--light-green);
+  /* color: var(--light-green); */
 }
 
 .ANS_service-container .content .check-list::before{
@@ -1901,6 +1901,133 @@ gap: 35px;
 .ANS_blog-wrapper{
   padding:120px 0;
 }
+
+
+/* ========= distribution partners page style ========= */
+.ANS_distribution-partners-wrap{
+  padding: 120px 0;
+}
+
+.ANS_distribution-partners-wrap .text-fill{
+  margin-bottom: 10px;
+}
+
+.ANS_distribution-partners-wrap .distribution-partners{
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 40px;
+}
+
+.ANS_distribution-partners-wrap .card{
+  padding: 20px;
+  border-radius: 16px;
+  background-color: rgba(128, 128, 128, 0.129);
+  backdrop-filter: blur(10px);
+  position: relative;
+  transition: border-color 0.3s ease-in-out;
+  --start: 0;
+}
+
+.ANS_distribution-partners-wrap .card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 14px;
+  border: 2px solid transparent;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    rgb(251, 55, 60),
+    rgba(252, 114, 28, 1),
+    rgba(255, 220, 0, 1),
+    rgba(27, 206, 255, 1),
+    rgba(42, 107, 255, 1),
+    rgba(217, 41, 255, 1),
+    rgba(255, 10, 92, 1)
+  );;
+  background-attachment: fixed;
+  mask: linear-gradient(#0000, #0000),
+    conic-gradient(
+      from calc((var(--start) - (20 * 1.1)) * 1deg),
+      #ffffff1f 0deg,
+      white,
+      #ffffff00 100deg
+    );
+  mask-composite: intersect;
+  mask-clip: padding-box, border-box;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.ANS_distribution-partners-wrap .card .glow {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(14px);
+}
+
+.ANS_distribution-partners-wrap .card .glow::before {
+  position: absolute;
+  content: "";
+  width: 98%;
+  height: 98%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 14px;
+  border: 15px solid transparent;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    rgb(251, 55, 60),
+    rgba(252, 114, 28, 1),
+    rgba(255, 220, 0, 1),
+    rgba(27, 206, 255, 1),
+    rgba(42, 107, 255, 1),
+    rgba(217, 41, 255, 1),
+    rgba(255, 10, 92, 1)
+  );;
+  background-attachment: fixed;
+  mask: linear-gradient(#0000, #0000),
+    conic-gradient(
+      from calc((var(--start) - (20 * 1.1)) * 1deg),
+      #ffffff1f 0deg,
+      white,
+      #ffffff00 100deg
+    );
+  mask-composite: intersect;
+  mask-clip: padding-box, border-box;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.ANS_distribution-partners-wrap .card:hover > .glow::before {
+  opacity: 1;
+}
+.ANS_distribution-partners-wrap .card:hover::before {
+  opacity: 0.6;
+}
+
+.ANS_distribution-partners-wrap .card img{
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.ANS_distribution-partners-wrap .card h3{
+  text-align: center;
+}
+
+
+
 /* ================= 
       Device responsiveness
              ================== */

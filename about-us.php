@@ -251,15 +251,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
     ?>
           </div>
     </div>
-  </section>
-
-  <!-- company location -->
-  <div class="ANS_company-location-wrap">
-    <div class="ANS_company-location-inner">
-        <img  data-aos="fade-down" src="<?php echo get_field('company_location_map_large_image'); ?>" alt="Company location">
-    </div>
-   </div>
-     
+  </section>    
     </main>
 
 <?php
