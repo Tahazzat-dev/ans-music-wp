@@ -55,9 +55,6 @@ $banner_subtitle = get_field('next_label_distribution_banner_subtitle');
 
       <?php
         $next_distribution_services = get_field('next_label_distribution_features');
-//         echo '<pre>';
-// print_r($next_distribution_services);
-// echo '</pre>';
       ?>
 
       <section class="ANS_next-label-distribution-wrap">
@@ -67,15 +64,15 @@ $banner_subtitle = get_field('next_label_distribution_banner_subtitle');
               ?>
                 <!-- distribution info -->
            <div class="distribution-container">
-             <h3 class="fs-4xl"><?php echo $distribution['title'];?></h3>
-             <p class="fs-base"><?php echo $distribution['description'];?></p>
+             <h3 data-aos="zoom-in" class="fs-4xl"><?php echo $distribution['title'];?></h3>
+             <p data-aos="zoom-in" class="fs-base"><?php echo $distribution['description'];?></p>
 
              <div class="section-thum">
-                 <img src="<?php echo $distribution['feature_thum'];?>" alt="section thumnail">
+                 <img data-aos="zoom-in" src="<?php echo $distribution['feature_thum'];?>" alt="section thumnail">
              </div>
 
               <div class="key-features">
-                <h4 class="fs-3xl feature-title">Key Features</h4>
+                <h4 data-aos="fade-up" class="fs-3xl feature-title">Key Features</h4>
 
                 <div class="features">
                   <?php
@@ -83,7 +80,7 @@ $banner_subtitle = get_field('next_label_distribution_banner_subtitle');
                     foreach($distribution['key_features'] as $key_feature):
                       ?>
                       <!-- feature card -->
-                    <div class="feature-card">
+                    <div data-aos="fade-up" class="feature-card">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" data-v-5ebbf696=""><path d="M16 0L20.3215 11.6785L32 16L20.3215 20.3215L16 32L11.6785 20.3215L0 16L11.6785 11.6785L16 0Z" fill="#EBD510" data-v-5ebbf696=""></path></svg>
                     <h4 class="fs-xl"><?php echo $key_feature['title'] ?></h4>
                     <p><?php echo $key_feature['description'] ?></p>
