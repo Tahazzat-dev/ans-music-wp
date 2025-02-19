@@ -29,7 +29,7 @@ get_header();
         <h2 data-aos="zoom-in" class="fs-4xl text-center">
           <?php echo get_field('feature_sub_title'); ?>
         </h2>
-        <p data-aos="fade-up"><?php echo get_field('feature_description') ?></p>
+        <p class="fs-lg-lh-md" data-aos="fade-up"><?php echo get_field('feature_description') ?></p>
       </div>
     </div>
   </section>

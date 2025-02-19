@@ -64,7 +64,18 @@ $current_slug = get_post_field('post_name', get_post());
               <a class="fs-base <?php echo $current_slug=="services" ? 'active':''; ?>" href="<?php echo home_url(); ?>/services">SERVICE</a>
             </li>
             <li data-aos="zoom-in-down">
-              <a class="fs-base <?php echo $current_slug=="why-ans-music" ? 'active':''; ?>" href="#">WHY ANS MUSIC</a>
+              <div class="ANS_dropdown-container fs-base <?php echo $current_slug=="why-ans-music" ? 'active':''; ?>" href="#">WHY ANS MUSIC
+              <ul class="dropdown-menu ANS_flex flex_column">
+                <li> <a href="<?php echo esc_url(site_url('/features/analytics')) ?>">Analytics & Insights</a> </li>
+                <li> <a href="<?php echo esc_url(site_url('/features/catalog-management')) ?>">Catalog Management</a> </li>
+                <li> <a href="<?php echo esc_url(site_url('/features/rights-management')) ?>">Rights Management</a> </li>
+                <li> <a href="<?php echo esc_url(site_url('/features/distribution-and-delivery')) ?>">Distribution & Delivery</a> </li>
+                <li> <a href="<?php echo esc_url(site_url('/features/income-tracking')) ?>">Income Tracking</a> </li>
+                <li> <a href="<?php echo esc_url(site_url('/features/royalty-account')) ?>">Royalty Accounting</a> </li>
+                <li> <a href="<?php echo esc_url(site_url('/integrated-dsp')) ?>">Integrated DSP</a> </li>
+                <li> <a href="<?php echo esc_url(site_url('/next-label-distribution')) ?>">Next Label Distribution</a> </li>
+              </ul>
+              </div>
             </li>
             <li data-aos="zoom-in-down">
               <a
@@ -80,7 +91,7 @@ $current_slug = get_post_field('post_name', get_post());
             <li data-aos="zoom-in-down" class="about-link">
               <a class="fs-base <?php echo $current_slug=="about-us" ? 'active':''; ?>" href="<?php echo home_url(); ?>/about-us">ABOUT</a>
             </li>
-            <li data-aos="fade-left">
+            <li data-aos="fade-in">
               <a
                 class="fs-base ANS_btn btn-b-yellow"
                 target="_blank"
@@ -158,14 +169,14 @@ $current_slug = get_post_field('post_name', get_post());
                   >SERVICE</a
                 >
               </li>
-              <li>
+              <!-- <li>
                 <a
                   class="sidenav-link fill-fade-in fill-clr-white <?php echo $current_slug=="why-ans-music" ? 'active':''; ?>"
                   data-text="WHY ANS MUSIC"
                   href="#"
                   >WHY ANS MUSIC</a
                 >
-              </li>
+              </li> -->
               <li>
                 <a
                   class="sidenav-link fill-fade-in fill-clr-white"
