@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Distribution Partners page
+ * Template Name: Integrated DSP page
  *
  * @package ansmusic
  */
@@ -11,10 +11,10 @@ get_header();
 <?php
 // about us page customization related ACF fields
 
-$banner_large_background = get_field('distribution_partners_banner_large_background');
-$banner_small_background = get_field('distribution_partners_banner_small_background');
-$banner_title = get_field('distribution_partners_banner_title');
-$banner_subtitle = get_field('distribution_partners_banner_subtitle');
+$banner_large_background = get_field('integrated_dsp_banner_large_background');
+$banner_small_background = get_field('integrated_dsp_banner_small_background');
+$banner_title = get_field('integrated_dsp_banner_title');
+$banner_subtitle = get_field('integrated_dsp_banner_subtitle');
 ?>
  <main class="ANS_main-wrapper">
 
