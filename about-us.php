@@ -57,7 +57,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
       $company_vision = get_field('company_vision');
       ?>
        <!-- about ANS starts-->
- <section class="ANS_history-wrap">
+ <section class="ANS_history-wrap gradient-color-bg-small">
     <div class="ANS_history-inner ANS_container ANS_flex flex_align_center">
       <div class="thum-container">
         <img

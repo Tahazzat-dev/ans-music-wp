@@ -1645,6 +1645,7 @@ body {
 .ANS_distribution-plartform-wrap {
   width: 100%;
   padding-top: 120px;
+  padding-bottom: 70px;
 }
 .ANS_distribution-plartform-inner {
   width: 100%;
@@ -2207,8 +2208,36 @@ body {
     background-position: center;
 }
 
+.gradient-spot-bg-medium{
+  background: url('../gradient-bg/gradient-bg-medium-section.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gradient-spot-bg-narrow{
+  background: url('../gradient-bg/gradient-bg-narrow-section.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .gradient-spot-bg-small{
   background: url('../gradient-bg/gradient-bg-small-section.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gradient-spot-bg-small-narrow{
+  background: url('../gradient-bg/gradient-bg-small-narrow-section.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gradient-small-colorful-bg{
+  background: url('../gradient-bg/bg-spot-small-colorful.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

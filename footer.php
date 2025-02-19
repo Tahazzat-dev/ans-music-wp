@@ -36,7 +36,7 @@ $ansmusic_social_linkedin = get_theme_mod( 'ansmusic_social_linkedin', '');
 $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
 ?>
    <!-- footer starts -->
-   <footer class="ANS_footer">
+   <footer class="ANS_footer gradient-small-colorful-bg">
       <div class="footer-top ANS_container ANS_flex">
         <!-- site logo and description -->
         <div class="footer-des footer-col">
