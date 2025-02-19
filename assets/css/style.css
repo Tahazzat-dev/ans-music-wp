@@ -2039,7 +2039,8 @@ body {
   margin-bottom: 20px;
 }
 .ANS_single-feature-wrap .ANS_about-banner-content p {
-  margin-top: 5px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .features-wrap .text-center {
