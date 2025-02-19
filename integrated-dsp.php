@@ -108,11 +108,11 @@ $banner_subtitle = get_field('integrated_dsp_banner_subtitle');
                     <h3 class="fs-xl">Deezer</h3>
                 </div>
                 <!-- card -->
-                <div class="card">
+                <a href="<?php echo esc_attr(site_url('/distribution-partners/upload-music-to-facebook')) ?>" class="card">
                       <div class="glow"></div>
                     <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/facebook.svg';?>" alt="partners icon">
                     <h3 class="fs-xl">Facebook</h3>
-                </div>
+                </a>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
@@ -234,11 +234,11 @@ $banner_subtitle = get_field('integrated_dsp_banner_subtitle');
                     <h3 class="fs-xl">Soundcloud</h3>
                 </div>
                 <!-- card -->
-                <div class="card">
+                <a href="<?php echo esc_attr(site_url('/distribution-partners/upload-music-on-spotify')) ?>" class="card">
                       <div class="glow"></div>
                     <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/spotify.svg';?>" alt="partners icon">
                     <h3 class="fs-xl">Spotify</h3>
-                </div>
+                </a>
                 <!-- card -->
                 <div class="card">
                       <div class="glow"></div>
@@ -276,11 +276,11 @@ $banner_subtitle = get_field('integrated_dsp_banner_subtitle');
                     <h3 class="fs-xl">YouTube Music</h3>
                 </div>
                 <!-- card -->
-                <div class="card">
+                <a href="<?php echo esc_attr(site_url('/distribution-partners/upload-music-on-youtube')) ?>" class="card">
                       <div class="glow"></div>
                     <img src="<?php echo get_template_directory_uri(). '/assets/dsplogo/youtube.svg';?>" alt="partners icon">
                     <h3 class="fs-xl">YouTube</h3>
-                </div>
+                </a>
                 <!-- card -->
            </div>
            </div>
