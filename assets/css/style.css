@@ -682,6 +682,7 @@ body {
   width: 100%;
   padding: 120px 0;
   position: relative;
+  overflow: hidden;
 }
 .ANS_home-widgets-wrap .ANS_home-widget-bg-overlay {
   width: 100%;
@@ -973,7 +974,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
 }
 .ANS_music-sales-tracking-inner .center-logo img {
-  max-width: 200px;
+  max-width: 100px;
 }
 
 /* keyframe animation */
@@ -3463,6 +3464,7 @@ body {
   .ANS_home-widgets-inner .card.flex_align_center {
     flex-direction: column;
     align-items: left;
+    
   }
 
   .ANS_home-widgets-inner .card .content {

@@ -63,10 +63,11 @@ get_header();
 
       <?php
       $home_widgets = get_field('home_banner_widget_items');
-      foreach ($home_widgets as $widgets) {
+      foreach ($home_widgets as $index => $widgets) {
+        $animation = ($index % 2 === 0) ? "slide-right" : "slide-left";
         ?>
         <!-- card -->
-        <div class="card ANS_flex flex_align_center">
+        <div data-aos-offset="300" data-aos=<?php echo $animation;?> class="card ANS_flex flex_align_center">
           <div class="anim-box"><img src="<?php echo $widgets['icon'] ?>" alt="related icon"></div>
           <div class="content">
             <h4 class="fs-lg"><?php echo $widgets['title'] ?></h4>
@@ -143,11 +144,6 @@ get_header();
     </div>
   </section>
 
-  <!-- our partners -->
-  <section class="ANS_partners-wrap">
-    <?php get_template_part('template-parts/content', 'partners'); ?>
-  </section>
-
   <!-- music sales and tracking starts -->
   <?php
   $sales_section = get_field('home_sell_your_music_section');
@@ -155,7 +151,7 @@ get_header();
   <div class="ANS_music-sales-tracking-wrap">
     <div class="ANS_music-sales-tracking-inner ANS_container ANS_flex flex_column">
       <div class="ANS_flex flex_align_center justify_between sales-report">
-        <div class="main-thum thum">
+        <div data-aos-offset="400" data-aos="zoom-in" class="main-thum thum">
           <div class="big-circle">
             <div class="icon-block">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/dsplogo/amazon.svg" alt="web design icon" />
@@ -186,12 +182,12 @@ get_header();
             </div>
           </div>
           <div class="center-logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/dsplogo/iheart.svg" alt="logo" />
+            <img src="<?php echo $sales_section['circle_animation_center_logo']; ?>" alt="logo" />
           </div>
         </div>
         <div class="content">
-          <h3 class="fs-2xl"><?php echo $sales_section['title']; ?></h3>
-          <p><?php echo $sales_section['description']; ?></p>
+          <h3 data-aos="fade-up" class="fs-2xl"><?php echo $sales_section['title']; ?></h3>
+          <p data-aos="fade-up"><?php echo $sales_section['description']; ?></p>
         </div>
       </div>
 
@@ -200,10 +196,10 @@ get_header();
       ?>
       <div class="ANS_flex flex_align_center justify_between dive-deeper">
         <div class="content">
-          <h3 class="fs-2xl"><?php echo $deep_dive_section['title']; ?></h3>
-          <p><?php echo $deep_dive_section['description']; ?></p>
+          <h3 data-aos="fade-up" class="fs-2xl"><?php echo $deep_dive_section['title']; ?></h3>
+          <p data-aos="fade-up"><?php echo $deep_dive_section['description']; ?></p>
         </div>
-        <div class="thum">
+        <div data-aos="zoom-in" class="thum">
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sales-analaytics-thum.svg"
             alt="section thumnail">
         </div>
