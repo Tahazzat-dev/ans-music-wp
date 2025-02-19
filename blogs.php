@@ -226,7 +226,7 @@ $banner_subtitle = get_field('blogs_banner_subtitle');
 
 
                  <!-- different stores -->
-      <section class="ANS_different-stores-wrap">
+      <section class="ANS_different-stores-wrap gradient-color-bg-small blog-page">
         <div class="ANS_different-stores-inner ANS_container">
             <div class="top-text">
                 <h3 class="fs-4xl">100+ Different Digital Stores</h3>

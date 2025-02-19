@@ -1777,6 +1777,10 @@ body {
   padding: 120px 0;
 }
 
+.blog-page.ANS_different-stores-wrap {
+  margin-top:100px;
+}
+
 .ANS_different-stores-inner .top-text {
   text-align: center;
   margin-bottom: 40px;
