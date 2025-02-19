@@ -53,7 +53,7 @@ $banner_subtitle = get_field('services_banner_subtitle');
   $plartform_details_second = get_field('plartform_details_second');
   $plartform_details_third = get_field('plartform_details_third');
   ?>
-  <section class="ANS_distribution-plartform-wrap">
+  <section class="ANS_distribution-plartform-wrap gradient-color-bg-small">
     <div class="ANS_distribution-plartform-inner ANS_container">
       <div class="top-text">
         <h2 data-aos="fade-up" class="fs-5xl">
@@ -110,7 +110,7 @@ $banner_subtitle = get_field('services_banner_subtitle');
 
   ?>
 
-  <section class="ANS_service-wrapper ANS_flex flex_column">
+  <section class="ANS_service-wrapper ANS_flex flex_column gradient-spot-bg-large">
 
     <?php
 
@@ -156,7 +156,7 @@ $banner_subtitle = get_field('services_banner_subtitle');
   $different_digital_stores_section_title = get_field('different_digital_stores_section_title');
   $different_digital_stores_section_description = get_field('different_digital_stores_section_description');
   ?>
-  <section class="ANS_different-stores-wrap">
+  <section class="ANS_different-stores-wrap gradient-spot-bg-small">
     <div class="ANS_different-stores-inner ANS_container">
       <div class="top-text">
         <h3 data-aos="fade-up" class="fs-4xl">
