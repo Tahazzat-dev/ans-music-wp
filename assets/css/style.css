@@ -1437,6 +1437,7 @@ body {
 .ANS_team-wrap {
   width: 100%;
   /* padding: 120px; */
+  padding: 70px 0;
 }
 .ANS_team-inner {
   position: relative;
@@ -1506,6 +1507,7 @@ body {
 .ANS_expertise-wrap {
   width: 100%;
   padding-top: 120px;
+  padding-bottom: 70px;
 }
 .ANS_expertise-inner {
   position: relative;
@@ -1710,6 +1712,7 @@ body {
   padding-top: 120px;
   width: 100%;
   gap: 120px;
+  padding-bottom: 70px;
 }
 
 .ANS_service-container {

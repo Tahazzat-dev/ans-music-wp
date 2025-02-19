@@ -57,7 +57,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
       $company_vision = get_field('company_vision');
       ?>
        <!-- about ANS starts-->
- <section class="ANS_history-wrap gradient-color-bg-small">
+ <section class="ANS_history-wrap">
     <div class="ANS_history-inner ANS_container ANS_flex flex_align_center">
       <div class="thum-container">
         <img
@@ -80,7 +80,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
 <!-- about ANS ends-->
 
 <!-- ANS history starts -->
-<section class="ANS_history-wrap">
+<section class="ANS_history-wrap ">
     <div class="ANS_history-inner ANS_container ANS_flex flex_align_center">
       <div class="history-content">
         <h3  data-aos="zoom-in-up" class="fs-2xl section_title"><?php echo $company_mission['title']; ?></h3>
@@ -107,7 +107,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
       $video_distributed = get_field('video_distributed');
  ?>
   <!-- ANS analytics starts -->
-  <section class="ANS_analytics-wrap">
+  <section class="ANS_analytics-wrap ">
     <div class="ANS_analytics-inner ANS_container">
       <div class="content ANS_flex">
         <div class="total-distributed-music">
@@ -129,7 +129,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
    $team_info_section_title = get_field('team_info_section_title');
  ?>
     <!-- our team -->
-    <section class="ANS_team-wrap">
+    <section class="ANS_team-wrap gradient-spot-bg-small">
         <div class="ANS_team-inner ANS_container">
           <div class="top-text">
             <h2 class="section-title text-fill neon-stroke fs-6xl">
@@ -195,7 +195,7 @@ $banner_subtitle = get_field('about_us_banner_subtitle');
         <?php
    $our_expertise_section_title = get_field('about_us_our_experitse_section_title');
  ?>
-  <section class="ANS_expertise-wrap">
+  <section class="ANS_expertise-wrap gradient-color-bg-small">
     <div class="ANS_expertise-inner ANS_container">
         <div class="top-text">
             <h2 class="section-title text-fill neon-stroke fs-6xl">
