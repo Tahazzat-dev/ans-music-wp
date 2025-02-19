@@ -2198,6 +2198,29 @@ body {
 }
 
 
+/* gradient spot background */
+
+.gradient-spot-bg-large{
+    background: url('../gradient-bg/gradient-bg-large-section.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gradient-spot-bg-small{
+  background: url('../gradient-bg/gradient-bg-small-section.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.gradient-color-bg-small{
+  background: url('../gradient-bg/bg-spot-colorful.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 /* ================= 
       Device responsiveness
              ================== */

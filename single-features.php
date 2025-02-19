@@ -15,7 +15,7 @@ get_header();
       <picture>
         <source media="(min-width: 768px)" srcset="<?php echo get_field('feature_banner_image') ?>" />
         <source media="(max-width: 767px)" srcset="<?php echo get_field('feature_banner_image') ?>" />
-        <img data-aos="fade-down" src="<?php echo get_field('feature_banner_image'); ?>" alt="Banner image" />
+        <img  src="<?php echo get_field('feature_banner_image'); ?>" alt="Banner image" />
       </picture>
 
       <div class="banner-overlay"></div>
@@ -25,11 +25,11 @@ get_header();
     <div class="ANS_about-banner-container ANS_flex flex_column">
       <div style="max-width:1000px; overflow: hidden;"
         class="ANS_about-banner-content ANS_container ANS_flex flex_column flex_align_center justify_center">
-        <h5 class="fs-lg-lh-md"><?php the_title(); ?></h5>
-        <h2 class="fs-4xl text-center">
+        <h5 data-aos="zoom-in" class="fs-lg-lh-md"><?php the_title(); ?></h5>
+        <h2 data-aos="zoom-in" class="fs-4xl text-center">
           <?php echo get_field('feature_sub_title'); ?>
         </h2>
-        <p><?php echo get_field('feature_description') ?></p>
+        <p data-aos="fade-up"><?php echo get_field('feature_description') ?></p>
       </div>
     </div>
   </section>
@@ -80,7 +80,7 @@ get_header();
   ?>
   <div class="ANS_distribution-partners-wrap features-wrap">
     <div class="ANS_distribution-partners-inner ANS_container">
-      <h2 class="fs-5xl text-fill neon-stroke text-center">
+      <h2 data-aos="zoom-in" class="fs-5xl text-fill neon-stroke text-center">
         <span data-text="EXPLORE">EXPLORE</span>
       </h2>
       <div class="distribution-partners">
@@ -97,9 +97,9 @@ get_header();
             <!-- card -->
             <a href="<?php the_permalink(); ?>" class="card">
               <div class="glow"></div>
-              <img src="<?php echo get_template_directory_uri() . '/assets/icons/analytics-and-insights.svg'; ?>"
+              <img data-aos="zoom-in" src="<?php echo get_template_directory_uri() . '/assets/icons/analytics-and-insights.svg'; ?>"
                 alt="partners icon">
-              <h3 class="fs-md"><?php the_title(); ?></h3>
+              <h3 data-aos="zoom-in" class="fs-md"><?php the_title(); ?></h3>
             </a>
             <!-- card -->
             <?php

@@ -229,7 +229,7 @@ get_header();
         </h2>
       </div>
 
-      <div class="service-info ANS_flex justify_between">
+      <div class="service-info ANS_flex justify_between ">
 
         <!-- left box required ACF fields -->
         <?php
@@ -325,7 +325,7 @@ get_header();
   }
   ?>
   <!-- new breads, artist and partners -->
-  <section class="ANS_bread-and-artists ANS_partners-wrap">
+  <section class="ANS_bread-and-artists ANS_partners-wrap gradient-color-bg-small">
     <div class="bread-and-artist-inner ANS_container">
       <h3 data-aos="zoom-in" class="fs-3xl">
         <?php echo !empty($home_bread_and_artist_section_title) ? $home_bread_and_artist_section_title : ''; ?>
