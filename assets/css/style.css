@@ -331,6 +331,8 @@ body {
   flex-grow: 1;
   padding: 7%;
   overflow-y: auto;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .ANS_sidebar .contact-col .contact-wrapper {
@@ -424,10 +426,10 @@ body {
 }
 
 .ANS_sidebar .our-partners-wrapper {
-  max-width: 500px;
+  /* max-width: 686px; */
   margin: 0 auto;
   width: 100%;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   justify-content: end;
 }
 .ANS_sidebar .our-partners-wrapper .marquee-container-inner {
@@ -598,9 +600,18 @@ body {
   font-style: normal;
 }
 
-.ANS_footer .ANS_contact-form-wrap {
+.ANS_footer .ANS_quick-links-wrap{
   width: 100%;
   max-width: 350px;
+}
+
+.ANS_quick-links-inner #menu-quick-links li{
+  margin-bottom:4px;
+  transition:0.3s;
+}
+
+.ANS_quick-links-inner #menu-quick-links li:hover{
+  text-decoration:underline;
 }
 
 .ANS_footer .membership-info {
@@ -1192,10 +1203,13 @@ body {
 
 .ANS_bread-and-artists .ANS_marquee-slider img {
   max-height: 100px;
-  height: 100%;
+  height: 120px;
   border-radius: 15px;
   margin: 0 16px;
+  width: 120px;
+  min-width:120px;
 }
+
 
 /* ============= contact page ======== */
 /* banner style */
@@ -2490,10 +2504,11 @@ body {
 
   .ANS_bread-and-artists .ANS_marquee-slider img {
     max-height: 80px;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     border-radius: 14px;
     margin: 0 15px;
+    min-width:100px;
   }
 
   .ANS_marquee-slider img {
@@ -2733,7 +2748,7 @@ body {
     max-width: 350px;
   }
 
-  .ANS_footer .ANS_contact-form-wrap {
+  .ANS_footer .ANS_quick-links-wrap{
     margin-top: 0px !important;
   }
 
@@ -2779,10 +2794,11 @@ body {
 
   .ANS_bread-and-artists .ANS_marquee-slider img {
     max-height: 60px;
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     border-radius: 12px;
     margin: 0 10px;
+    min-width:80px;
   }
 
   /* =============about us page======= */
@@ -2987,11 +3003,12 @@ body {
   }
 
   .ANS_bread-and-artists .ANS_marquee-slider img {
-    max-height: 50px;
-    height: 50px;
-    width: 50px;
+    max-height: 60px;
+    height: 70px;
+    width: 70px;
     border-radius: 8px;
     margin: 0 10px;
+    min-width:70px;
   }
 
   /* ========== contact page ============ */

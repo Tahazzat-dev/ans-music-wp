@@ -213,8 +213,8 @@ $current_slug = get_post_field('post_name', get_post());
           </div>
 
           <!-- contact column -->
-          <div class="contact-col ANS_flex flex_column">
-            <div class="ANS_flex contact-wrapper">
+          <div class="contact-col ANS_flex flex_column justify_center">
+            <div class="ANS_flex contact-wrapper flex_align_center">
               <div class="ANS_contact-info ANS_flex flex_column">
                 <h5 class="fs-md">OFFICES</h5>
                 <address>
@@ -243,8 +243,8 @@ $current_slug = get_post_field('post_name', get_post());
               </div>
 
               <div class="ANS_contact-form-wrap">
-                <h5 class="fs-md">Start A Conversation</h5>
-                <?php get_template_part('template-parts/contact', 'form'); ?>
+                <!-- <h5 class="fs-md">Start A Conversation</h5> -->
+                <?php // get_template_part('template-parts/contact', 'form'); ?>
 
                 <div class="phone-wrap ANS_flex flex_align_center">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/img/phone.webp" alt="phone icon" />

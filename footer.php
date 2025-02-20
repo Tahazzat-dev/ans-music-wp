@@ -83,9 +83,12 @@ $ansmusic_social_youtube = get_theme_mod( 'ansmusic_social_youtube', '');
         </div>
 
         <!-- quick links -->
-        <div class="footer-col ANS_contact-form-wrap">
-          <h5 data-aos="zoom-in" class="fs-md">Start A Conversation</h5>
-          <?php get_template_part('template-parts/contact', 'form'); ?>
+        <div class="footer-col ANS_quick-links-wrap">
+        <h5 data-aos="zoom-in">QUICK LINKS</h5>
+
+        <div class="ANS_quick-links-inner">
+          <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) );?>
+        </div>
         </div>
 
         <!-- basis membership logo -->

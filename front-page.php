@@ -144,6 +144,15 @@ get_header();
     </div>
   </section>
 
+  <div class="ANS_how-it-works-wrapper">
+      <!-- our partners -->
+      <div
+              class="ANS_container our-partners-wrapper marquee-container ANS_flex flex_column"
+            >
+              <?php get_template_part('template-parts/content', 'partners'); ?>
+            </div>
+  </div>
+
   <!-- music sales and tracking starts -->
   <?php
   $sales_section = get_field('home_sell_your_music_section');
